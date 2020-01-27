@@ -11,7 +11,7 @@ def hello_world():
 
 @app.route('/detect')
 def detect_ui():
-    return render_template('detection.html')
+    return render_template('start.html')
 
 @app.route('/login',methods=['POST','GET'])
 def login():
@@ -21,10 +21,14 @@ def login():
         print('密码'+request.form['password'])
         if request.form['user'] == 'admin' and request.form['password'] == '123456':
             print('成功了')
-            return render_template('start.html')
+            response = {"status": 200,
+                        "msg":"success"}
+            return jsonify(response)
         else:
             print('错误了')
-            return 'ERROR'
+            response = {"status": 200,
+                        "msg": "error"}
+            return jsonify(response)
 
 if __name__ == '__main__':
     app.run(debug=True)
