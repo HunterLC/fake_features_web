@@ -7,7 +7,7 @@ CORS(app, supports_credentials=True)
 
 @app.route('/')
 def hello_world():
-    return render_template('start.html')
+    return render_template('login.html')
 
 @app.route('/detect')
 def detect_ui():
@@ -21,7 +21,7 @@ def login():
         print('密码'+request.form['password'])
         if request.form['user'] == 'admin' and request.form['password'] == '123456':
             print('成功了')
-            return render_template("success.html")
+            return render_template('start.html')
         else:
             print('错误了')
             return 'ERROR'
