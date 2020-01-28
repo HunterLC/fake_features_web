@@ -74,6 +74,8 @@ $(function () {
   })
 
 
+  var list1 = new List();
+  var list2 = new List();
 
   var $visitorsChart = $('#visitors-chart')
   var visitorsChart  = new Chart($visitorsChart, {
@@ -81,7 +83,7 @@ $(function () {
       labels  : ['8th', '20th', '22nd', '24th', '26th', '28th', '30th'],
       datasets: [{
         type                : 'line',
-        data                : [130, 140, 150, 190, 106, 125, 110],
+        data                : [30, 30, 30, 30, 30, 30, 30],
         backgroundColor     : 'transparent',
         borderColor         : '#007bff',
         pointBorderColor    : '#007bff',
@@ -92,7 +94,7 @@ $(function () {
       },
         {
           type                : 'line',
-          data                : [170, 40, 50, 90, 150, 25, 10],
+          data                : [10, 10, 10, 10, 10, 10, 10],
           backgroundColor     : 'tansparent',
           borderColor         : '#ced4da',
           pointBorderColor    : '#ced4da',
@@ -139,4 +141,28 @@ $(function () {
       }
     }
   })
+
+  function updateChart(){
+    $.ajax({
+            //几个参数需要注意一下
+                type: "GET",//方法类型
+                dataType: "json",//预期服务器返回的数据类型
+                url: "{{url_for('get_table')}}" ,//url
+                success: function (result) {
+                    list1 = result.msg1;
+                    list2 = result.msg2;
+                    visitorsChart.data[1].datasets[0].data = list1;
+                    visitorsChart.data[1].datasets[1].data = list2;
+                },
+                error : function() {
+                    alert("异常！");
+                }
+            });
+  }
+
+  $(document).ready(function() {
+            //每隔3秒自动调用方法，实现图表的实时更新
+            window.setInterval(updateChart,4000);
+  });
+
 })
