@@ -13,6 +13,13 @@ def hello_world():
 def detect_ui():
     return render_template('start.html')
 
+@app.route('/getTable')
+def get_table():
+    response = {"status": 200,
+                "msg1": [130, 140, 150, 190, 106, 125, 110],
+                "msg2": [170, 40, 50, 90, 150, 25, 10]}
+    return jsonify(response)
+
 @app.route('/login',methods=['POST','GET'])
 def login():
     print("前端正在请求登录...")

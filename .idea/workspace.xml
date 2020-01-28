@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08c185d0-c77f-4dc5-a41f-f80fd1f45bd7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/dist/js/pages/dashboard3.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/js/pages/dashboard3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/start.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +89,7 @@
       <workItem from="1580054994037" duration="1854000" />
       <workItem from="1580106091764" duration="4178000" />
       <workItem from="1580135410043" duration="8092000" />
-      <workItem from="1580185244641" duration="998000" />
+      <workItem from="1580185244641" duration="7926000" />
     </task>
     <servers />
   </component>
@@ -94,32 +97,36 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580055559298">
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580189562441">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1580055559298" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1580144877503">
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1580189562441" />
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1580194753609">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1580144877503" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1580144877503">
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1580194753609" />
+    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1580194753609">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1580144877503" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1580144877503">
+    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1580194753609" />
+    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1580194753609">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1580144877503" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1580144877503">
+    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1580194753609" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1580194753609">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1580144877503" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1580194753609" />
     <state x="461" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1580185319792">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="461" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1580185319792" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1580194750607">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1580194750607" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FeatureWeb$FeatureWeb.coverage" NAME="FeatureWeb Coverage Results" MODIFIED="1580185364663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/FeatureWeb$FeatureWeb.coverage" NAME="FeatureWeb Coverage Results" MODIFIED="1580194583556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

@@ -102,7 +102,6 @@
                 url: "{{url_for('login')}}" ,//url
                 data: $('#loginform').serialize(),
                 success: function (result) {
-                    console.log(result);//打印服务端返回的数据(调试用)
                     if (result.msg == 'success') {
                         window.location.href="{{ url_for('detect_ui') }}";
                     }
