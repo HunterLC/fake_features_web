@@ -73,10 +73,6 @@ $(function () {
     }
   })
 
-
-  var list1 = new List();
-  var list2 = new List();
-
   var $visitorsChart = $('#visitors-chart')
   var visitorsChart  = new Chart($visitorsChart, {
     data   : {
@@ -143,16 +139,17 @@ $(function () {
   })
 
   function updateChart(){
-    $.ajax({
+    jQuery.ajax({
             //几个参数需要注意一下
                 type: "GET",//方法类型
+                async: false,
                 dataType: "json",//预期服务器返回的数据类型
-                url: "{{url_for('get_table')}}" ,//url
+                url: "/getTable" ,//url
                 success: function (result) {
-                    list1 = result.msg1;
-                    list2 = result.msg2;
-                    visitorsChart.data[1].datasets[0].data = list1;
-                    visitorsChart.data[1].datasets[1].data = list2;
+                  console.log(result.msg1)
+                    visitorsChart.data.datasets[0].data = result.msg1.split(",");
+                    visitorsChart.data.datasets[1].data = result.msg2.split(",");
+                    visitorsChart.update();
                 },
                 error : function() {
                     alert("异常！");
@@ -161,8 +158,8 @@ $(function () {
   }
 
   $(document).ready(function() {
-            //每隔3秒自动调用方法，实现图表的实时更新
-            window.setInterval(updateChart,4000);
+            //每隔1分钟自动调用方法，实现图表的实时更新
+            window.setInterval(updateChart,60000);
   });
 
 })
