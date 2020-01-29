@@ -158,8 +158,8 @@ $(function () {
   }
 
   $(document).ready(function() {
-            //每隔1分钟自动调用方法，实现图表的实时更新
-            window.setInterval(updateChart,60000);
+            //每隔3s自动调用方法，实现图表的实时更新
+            window.setInterval(updateChart,3000);
   });
 
 })

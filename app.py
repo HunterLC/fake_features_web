@@ -1,5 +1,6 @@
 from flask import Flask, url_for, request, redirect, session, make_response, jsonify, render_template
 from flask_cors import *
+import numpy as np
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
@@ -16,9 +17,13 @@ def detect_ui():
 @app.route('/getTable',methods=['POST','GET'])
 def get_table():
     print("前端正在请求表格...")
+    list1 = np.random.randint(0,200,7).tolist()
+    list1 = map(lambda x:str(x),list1)
+    list2 = np.random.randint(0, 100, 7).tolist()
+    list2 = map(lambda x: str(x), list2)
     response = {"status": 200,
-                "msg1": '130,140,150,190,106,125,110',
-                "msg2": '170,40,50,90,150,25,200'}
+                "msg1": ','.join(list1),
+                "msg2": ','.join(list2)}
     return jsonify(response)
 
 @app.route('/login',methods=['POST','GET'])
