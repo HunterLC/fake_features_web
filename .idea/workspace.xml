@@ -1,7 +1,632 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08c185d0-c77f-4dc5-a41f-f80fd1f45bd7" name="Default Changelist" comment="" />
+    <list default="true" id="08c185d0-c77f-4dc5-a41f-f80fd1f45bd7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/dist/js/pages/leedcn.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/dist/js/pages/map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/.headerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/.jshintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/.jshintrc-dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/.npmignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/DISCLAIMER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/KEYS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/NOTICE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/echarts-en.common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/echarts-en.common.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/echarts-en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/echarts-en.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/echarts-en.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/echarts-en.simple.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/echarts-en.simple.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/echarts.common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/echarts.common.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/echarts.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/echarts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/echarts.simple.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/echarts.simple.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/extension/bmap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/extension/bmap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/extension/bmap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/extension/dataTool.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/extension/dataTool.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/dist/extension/dataTool.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/echarts.all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/echarts.blank.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/echarts.common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/echarts.simple.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension-src/.eslintrc.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension-src/bmap/BMapCoordSys.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension-src/bmap/BMapModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension-src/bmap/BMapView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension-src/bmap/bmap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension-src/dataTool/gexf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension-src/dataTool/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension-src/dataTool/prepareBoxplotData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension/bmap/BMapCoordSys.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension/bmap/BMapModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension/bmap/BMapView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension/bmap/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension/bmap/bmap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension/dataTool/gexf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension/dataTool/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension/dataTool/prepareBoxplotData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension/echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/extension/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/index.common.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/index.simple.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/china-contour.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/china.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/anhui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/aomen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/beijing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/chongqing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/fujian.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/gansu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/guangdong.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/guangxi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/guizhou.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/hainan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/hebei.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/heilongjiang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/henan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/hubei.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/hunan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/jiangsu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/jiangxi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/jilin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/liaoning.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/neimenggu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/ningxia.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/qinghai.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/shandong.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/shanghai.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/shanxi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/shanxi1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/sichuan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/taiwan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/tianjin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/xianggang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/xinjiang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/xizang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/yunnan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/province/zhejiang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/js/world.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/china-cities.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/china-contour.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/china.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/anhui.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/aomen.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/beijing.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/chongqing.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/fujian.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/gansu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/guangdong.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/guangxi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/guizhou.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/hainan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/hebei.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/heilongjiang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/henan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/hubei.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/hunan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/jiangsu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/jiangxi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/jilin.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/liaoning.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/neimenggu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/ningxia.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/qinghai.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/shandong.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/shanghai.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/shanxi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/shanxi1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/sichuan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/taiwan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/tianjin.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/xianggang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/xinjiang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/xizang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/yunnan.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/province/zhejiang.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/map/json/world.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/.eslintrc.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/CoordinateSystem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/ExtensionAPI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/action/createDataSelectAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/action/geoRoam.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/action/roamHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/bar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/bar/BarSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/bar/BarView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/bar/BaseBarSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/bar/PictorialBarSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/bar/PictorialBarView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/bar/barItemStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/bar/helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/boxplot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/boxplot/BoxplotSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/boxplot/BoxplotView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/boxplot/boxplotLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/boxplot/boxplotVisual.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/candlestick.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/candlestick/CandlestickSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/candlestick/CandlestickView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/candlestick/candlestickLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/candlestick/candlestickVisual.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/candlestick/preprocessor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/chord.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/chord/ChordSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/chord/ChordView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/chord/Ribbon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/chord/chordCircularLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/effectScatter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/effectScatter/EffectScatterSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/effectScatter/EffectScatterView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/funnel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/funnel/FunnelSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/funnel/FunnelView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/funnel/funnelLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/gauge.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/gauge/GaugeSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/gauge/GaugeView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/gauge/PointerPath.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph/GraphSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph/GraphView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph/adjustEdge.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph/backwardCompat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph/categoryFilter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph/categoryVisual.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph/circularLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph/circularLayoutHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph/createView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph/edgeVisual.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph/forceHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph/forceLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph/graphAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph/graphHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph/simpleLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/graph/simpleLayoutHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/heatmap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/heatmap/HeatmapLayer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/heatmap/HeatmapSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/heatmap/HeatmapView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/EffectLine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/EffectPolyline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/EffectSymbol.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/LargeLineDraw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/LargeSymbolDraw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/Line.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/LineDraw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/LinePath.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/Polyline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/Symbol.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/SymbolDraw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/createClipPathFromCoordSys.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/createGraphFromNodeEdge.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/createGraphFromNodeMatrix.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/createListFromArray.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/createListSimply.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/createRenderPlanner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/focusNodeAdjacencyAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/labelHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/treeHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/helper/whiskerBoxCommon.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/line.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/line/LineSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/line/LineView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/line/helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/line/lineAnimationDiff.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/line/poly.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/lines.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/lines/LinesSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/lines/LinesView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/lines/linesLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/lines/linesVisual.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/map/MapSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/map/MapView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/map/backwardCompat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/map/mapDataStatistic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/map/mapSymbolLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/map/mapVisual.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/parallel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/parallel/ParallelSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/parallel/ParallelView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/parallel/parallelVisual.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/pictorialBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/pie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/pie/PieSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/pie/PieView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/pie/labelLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/pie/pieLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/radar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/radar/RadarSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/radar/RadarView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/radar/backwardCompat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/radar/radarLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/sankey.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/sankey/SankeySeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/sankey/SankeyView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/sankey/sankeyAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/sankey/sankeyLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/sankey/sankeyVisual.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/scatter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/scatter/ScatterSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/scatter/ScatterView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/sunburst.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/sunburst/SunburstPiece.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/sunburst/SunburstSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/sunburst/SunburstView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/sunburst/sunburstAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/sunburst/sunburstLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/themeRiver.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/themeRiver/ThemeRiverSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/themeRiver/ThemeRiverView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/themeRiver/themeRiverLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/themeRiver/themeRiverVisual.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/tree/TreeSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/tree/TreeView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/tree/layoutHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/tree/traversalHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/tree/treeAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/tree/treeLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/treemap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/treemap/Breadcrumb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/treemap/TreemapSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/treemap/TreemapView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/treemap/helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/treemap/treemapAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/treemap/treemapLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/chart/treemap/treemapVisual.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/angleAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axis/AngleAxisView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axis/AxisBuilder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axis/AxisView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axis/CartesianAxisView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axis/ParallelAxisView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axis/RadiusAxisView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axis/SingleAxisView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axis/axisSplitHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axis/parallelAxisAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axisPointer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axisPointer/AxisPointerModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axisPointer/AxisPointerView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axisPointer/BaseAxisPointer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axisPointer/CartesianAxisPointer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axisPointer/IAxisPointer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axisPointer/PolarAxisPointer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axisPointer/SingleAxisPointer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axisPointer/axisTrigger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axisPointer/findPointFromSeries.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axisPointer/globalListener.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axisPointer/modelHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/axisPointer/viewHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/brush.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/brush/BrushModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/brush/BrushView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/brush/brushAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/brush/preprocessor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/brush/selector.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/brush/visualEncoding.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/calendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/calendar/CalendarView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoom/AxisProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoom/DataZoomModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoom/DataZoomView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoom/InsideZoomModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoom/InsideZoomView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoom/SelectZoomModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoom/SelectZoomView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoom/SliderZoomModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoom/SliderZoomView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoom/dataZoomAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoom/dataZoomProcessor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoom/helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoom/history.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoom/roams.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoom/typeDefaulter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoomInside.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoomSelect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataZoomSlider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/dataset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/geo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/geo/GeoView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/graphic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/grid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/gridSimple.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/helper/BrushController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/helper/BrushTargetManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/helper/MapDraw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/helper/RoamController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/helper/brushHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/helper/cursorHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/helper/interactionMutex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/helper/listComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/helper/roamHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/helper/selectableMixin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/helper/sliderMove.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/legend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/legend/LegendModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/legend/LegendView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/legend/ScrollableLegendModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/legend/ScrollableLegendView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/legend/legendAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/legend/legendFilter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/legend/scrollableLegendAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/legendScroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/markArea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/markLine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/markPoint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/marker/MarkAreaModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/marker/MarkAreaView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/marker/MarkLineModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/marker/MarkLineView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/marker/MarkPointModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/marker/MarkPointView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/marker/MarkerModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/marker/MarkerView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/marker/markerHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/parallel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/parallelAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/polar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/radar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/radar/RadarView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/radiusAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/singleAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/timeline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/timeline/SliderTimelineModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/timeline/SliderTimelineView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/timeline/TimelineAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/timeline/TimelineModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/timeline/TimelineView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/timeline/preprocessor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/timeline/timelineAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/timeline/typeDefaulter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/title.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/toolbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/toolbox/ToolboxModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/toolbox/ToolboxView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/toolbox/feature/Brush.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/toolbox/feature/DataView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/toolbox/feature/DataZoom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/toolbox/feature/MagicType.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/toolbox/feature/Restore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/toolbox/feature/SaveAsImage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/toolbox/featureManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/tooltip/TooltipContent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/tooltip/TooltipModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/tooltip/TooltipRichContent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/tooltip/TooltipView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/visualMap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/visualMap/ContinuousModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/visualMap/ContinuousView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/visualMap/PiecewiseModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/visualMap/PiecewiseView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/visualMap/VisualMapModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/visualMap/VisualMapView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/visualMap/helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/visualMap/preprocessor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/visualMap/typeDefaulter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/visualMap/visualEncoding.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/visualMap/visualMapAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/visualMapContinuous.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/component/visualMapPiecewise.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/Axis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/ICoordinateSystem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/View.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/axisDefault.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/axisHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/axisModelCommonMixin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/axisModelCreator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/axisTickLabelBuilder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/calendar/Calendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/calendar/CalendarModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/calendar/prepareCustom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/cartesian/Axis2D.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/cartesian/AxisModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/cartesian/Cartesian.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/cartesian/Cartesian2D.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/cartesian/Grid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/cartesian/GridModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/cartesian/cartesianAxisHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/cartesian/prepareCustom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/geo/Geo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/geo/GeoModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/geo/Region.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/geo/fix/diaoyuIsland.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/geo/fix/geoCoord.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/geo/fix/nanhai.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/geo/fix/textCoord.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/geo/geoCreator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/geo/geoJSONLoader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/geo/geoSVGLoader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/geo/geoSourceManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/geo/mapDataStorage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/geo/parseGeoJson.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/geo/prepareCustom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/parallel/AxisModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/parallel/Parallel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/parallel/ParallelAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/parallel/ParallelModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/parallel/parallelCreator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/parallel/parallelPreprocessor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/polar/AngleAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/polar/AxisModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/polar/Polar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/polar/PolarModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/polar/RadiusAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/polar/polarCreator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/polar/prepareCustom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/radar/IndicatorAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/radar/Radar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/radar/RadarModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/single/AxisModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/single/Single.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/single/SingleAxis.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/single/prepareCustom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/single/singleAxisHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/coord/single/singleCreator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/data/DataDiffer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/data/DataDimensionInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/data/Graph.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/data/List.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/data/OrdinalMeta.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/data/Source.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/data/Tree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/data/helper/completeDimensions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/data/helper/createDimensions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/data/helper/dataProvider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/data/helper/dataStackHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/data/helper/dimensionHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/data/helper/linkList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/data/helper/sourceHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/data/helper/sourceType.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/echarts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/export.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/lang.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/langEN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/langES.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/langFI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/langTH.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/layout/barGrid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/layout/barPolar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/layout/points.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/loading/default.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/model/Component.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/model/Global.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/model/Model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/model/OptionManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/model/Series.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/model/globalDefault.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/model/mixin/areaStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/model/mixin/boxLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/model/mixin/colorPalette.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/model/mixin/dataFormat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/model/mixin/itemStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/model/mixin/lineStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/model/mixin/makeStyleMapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/model/mixin/textStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/model/referHelper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/preprocessor/backwardCompat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/preprocessor/helper/compatStyle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/processor/dataFilter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/processor/dataSample.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/processor/dataStack.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/scale/Interval.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/scale/Log.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/scale/Ordinal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/scale/Scale.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/scale/Time.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/scale/helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/stream/Scheduler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/stream/task.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/theme/dark.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/theme/light.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/util/KDTree.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/util/animation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/util/clazz.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/util/component.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/util/format.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/util/graphic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/util/layout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/util/model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/util/number.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/util/quickSelect.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/util/shape/sausage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/util/symbol.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/util/throttle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/view/Chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/view/Component.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/visual/LegendVisualProvider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/visual/VisualMapping.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/visual/aria.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/visual/dataColor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/visual/seriesColor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/visual/symbol.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/visual/visualDefault.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/src/visual/visualSolution.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/azul.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/bee-inspired.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/blue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/caravan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/carp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/cool.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/dark-blue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/dark-bold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/dark-digerati.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/dark-fresh-cut.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/dark-mushroom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/dark.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/eduardo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/forest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/fresh-cut.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/fruit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/gray.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/green.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/helianthus.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/infographic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/inspired.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/jazz.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/london.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/macarons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/macarons2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/mint.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/red-velvet.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/red.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/roma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/royal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/sakura.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/shine.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/tech-blue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/tool/option/area.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/tool/option/bar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/tool/option/graph.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/tool/option/map.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/tool/option/pie.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/tool/option/scatter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/tool/thumb.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/tool/thumb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/echarts/theme/vintage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/AUTHORS.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/external/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/images/ui-icons_444444_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/images/ui-icons_555555_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/images/ui-icons_777620_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/images/ui-icons_777777_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/images/ui-icons_cc0000_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/images/ui-icons_ffffff_256x240.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/jquery-ui.structure.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/jquery-ui.structure.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/jquery-ui.theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/jquery-ui/jquery-ui.theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/plugins/sparklines/sparkline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/start.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +637,7 @@
       <list>
         <option value="Flask Main" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -86,7 +712,9 @@
       <workItem from="1580185244641" duration="7926000" />
       <workItem from="1580222813868" duration="2895000" />
       <workItem from="1580225795917" duration="2670000" />
-      <workItem from="1580295392442" duration="1707000" />
+      <workItem from="1580295392442" duration="2226000" />
+      <workItem from="1580712161154" duration="599000" />
+      <workItem from="1581425302257" duration="8954000" />
     </task>
     <servers />
   </component>
@@ -94,36 +722,36 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580189562441">
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580712220374">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1580189562441" />
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1580297030645">
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1580712220374" />
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1581433998875">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1580297030645" />
-    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1580297030645">
+    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581433998875" />
+    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1581433998875">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1580297030645" />
-    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1580297030645">
+    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581433998875" />
+    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1581433998875">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1580297030645" />
-    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1580297030645">
+    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581433998875" />
+    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1581433998875">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1580297030645" />
-    <state x="461" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1580295487445">
+    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581433998875" />
+    <state x="461" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1581425304941">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="461" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1580295487445" />
+    <state x="461" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581425304941" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1580194750607">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1580194750607" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FeatureWeb$FeatureWeb.coverage" NAME="FeatureWeb Coverage Results" MODIFIED="1580296673104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/FeatureWeb$FeatureWeb.coverage" NAME="FeatureWeb Coverage Results" MODIFIED="1581433551920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

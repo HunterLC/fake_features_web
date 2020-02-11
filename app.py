@@ -15,8 +15,20 @@ def detect_ui():
     return render_template('start.html')
 
 @app.route('/getTable',methods=['POST','GET'])
-def get_table():
+def get_map():
     print("前端正在请求表格...")
+    list1 = np.random.randint(0,200,7).tolist()
+    list1 = map(lambda x:str(x),list1)
+    list2 = np.random.randint(0, 100, 7).tolist()
+    list2 = map(lambda x: str(x), list2)
+    response = {"status": 200,
+                "msg1": ','.join(list1),
+                "msg2": ','.join(list2)}
+    return jsonify(response)
+
+@app.route('/getMap',methods=['POST','GET'])
+def get_table():
+    print("前端正在请求地图...")
     list1 = np.random.randint(0,200,7).tolist()
     list1 = map(lambda x:str(x),list1)
     list2 = np.random.randint(0, 100, 7).tolist()
