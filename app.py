@@ -170,6 +170,24 @@ def get_user_location(df_user):
            {"name":"其他","value":others}]
     return map
 
+def get_user_gender(df_user):
+    unknown = 0 #未知
+    male = 0 #男性
+    female = 0 #女性
+    for index, row in df_user.iterrows():
+        user_gender = row['user_gender']
+        if (pd.isna(user_gender)):
+            unknown += 1
+        elif (user_gender == '男'):
+            male += 1
+        elif (user_gender == '女'):
+            female += 1
+    list_gender = [male, female, unknown]
+    list_gender = map(lambda x: str(x), list_gender)
+    response = {"status": 200,
+                "gender": ','.join(list_gender)}
+    return response
+
 @app.route('/')
 def hello_world():
     return render_template('login.html')
@@ -179,7 +197,7 @@ def detect_ui():
     return render_template('start.html')
 
 @app.route('/getTable',methods=['POST','GET'])
-def get_map():
+def get_table():
     print("前端正在请求表格...")
     list1 = np.random.randint(0,200,7).tolist()
     list1 = map(lambda x:str(x),list1)
@@ -191,10 +209,16 @@ def get_map():
     return jsonify(response)
 
 @app.route('/getMap',methods=['POST','GET'])
-def get_table():
+def get_map():
     print("前端正在请求地图...")
     df_user = user_data_read()
     return jsonify(get_user_location(df_user))
+
+@app.route('/getGender',methods=['POST','GET'])
+def get_gender():
+    print("前端正在请求性别...")
+    df_user = user_data_read()
+    return jsonify(get_user_gender(df_user))
 
 @app.route('/login',methods=['POST','GET'])
 def login():

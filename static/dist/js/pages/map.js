@@ -4,7 +4,7 @@ var myChart = echarts.init(dom);
 var cnDataset = [];
 option = null;
 updateFlag = true;
-var t1 = null;
+var tMap = null;
 
 option = {
     baseOption: {
@@ -160,7 +160,7 @@ function updateMap(){
                         options: []
                     });
                     myChart.hideLoading();
-                    window.clearTimeout(t1);
+                    window.clearTimeout(tMap);
                 },
                 error : function() {
                     alert("异常！");
@@ -175,6 +175,6 @@ if (option && typeof option === "object") {
 
 $(document).ready(function() {
     //每隔5s自动调用方法，实现图表的实时更新
-    t1 = window.setTimeout(updateMap,5000);
+    tMap = window.setTimeout(updateMap,5000);
 
 });
