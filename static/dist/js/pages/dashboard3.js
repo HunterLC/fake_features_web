@@ -1,6 +1,7 @@
 $(function () {
   'use strict'
 
+  var t1 = null;
   var ticksStyle = {
     fontColor: '#495057',
     fontStyle: 'bold'
@@ -150,6 +151,7 @@ $(function () {
                     visitorsChart.data.datasets[0].data = result.msg1.split(",");
                     visitorsChart.data.datasets[1].data = result.msg2.split(",");
                     visitorsChart.update();
+                    window.clearTimeout(t1);
                 },
                 error : function() {
                     alert("异常！");
@@ -159,7 +161,7 @@ $(function () {
 
   $(document).ready(function() {
             //每隔3s自动调用方法，实现图表的实时更新
-            window.setInterval(updateChart,3000);
+    t1 = window.setTimeout(updateChart,5000);
   });
 
 })
