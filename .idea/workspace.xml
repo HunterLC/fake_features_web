@@ -4,13 +4,29 @@
     <list default="true" id="08c185d0-c77f-4dc5-a41f-f80fd1f45bd7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dist/js/pages/map.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/js/pages/map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/dist/js/pages/dashboard3.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/js/pages/dashboard3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/detection.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/start.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/success.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -37,7 +53,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/plugins" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -46,6 +62,16 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="ts.external.directory.path" value="E:\python\PyCharm 2019.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\PythonCode\FeatureWeb\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\PythonCode\FeatureWeb\static\plugins" />
+      <recent name="E:\PythonCode\FeatureWeb\static\image" />
+    </key>
   </component>
   <component name="RunManager" selected="Flask server.FeatureWeb">
     <configuration name="run" type="PythonConfigurationType" factoryName="Python">
@@ -149,6 +175,16 @@
       <workItem from="1581506498783" duration="23000" />
       <workItem from="1581506651028" duration="4398000" />
       <workItem from="1581511366573" duration="3408000" />
+      <workItem from="1581585302251" duration="314000" />
+      <workItem from="1581921765122" duration="85000" />
+      <workItem from="1581934968682" duration="669000" />
+      <workItem from="1582093879742" duration="30000" />
+      <workItem from="1584087794583" duration="3181000" />
+      <workItem from="1584095716758" duration="3714000" />
+      <workItem from="1584163539513" duration="7563000" />
+      <workItem from="1584172339186" duration="3418000" />
+      <workItem from="1584192333720" duration="553000" />
+      <workItem from="1584253459523" duration="7648000" />
     </task>
     <servers />
   </component>
@@ -156,41 +192,56 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581512185910">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="223" y="102" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584163857301">
+      <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1581512185910" />
+    <state x="223" y="102" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1536.834@0.30.1536.834" timestamp="1584163857301" />
+    <state x="499" y="194" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584099527650">
+      <screen x="0" y="30" width="1536" height="834" />
+    </state>
+    <state x="499" y="194" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1536.834@0.30.1536.834" timestamp="1584099527650" />
     <state x="548" y="171" key="FileChooserDialogImpl" timestamp="1581512183448">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581512183448" />
-    <state width="1493" height="242" key="GridCell.Tab.0.bottom" timestamp="1581515014484">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="265" key="GridCell.Tab.0.bottom" timestamp="1584261277324">
+      <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1493" height="242" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581515014484" />
-    <state width="1493" height="242" key="GridCell.Tab.0.center" timestamp="1581515014484">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="242" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581936409145" />
+    <state width="1493" height="265" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1584261277324" />
+    <state width="1493" height="265" key="GridCell.Tab.0.center" timestamp="1584261277324">
+      <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1493" height="242" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581515014484" />
-    <state width="1493" height="242" key="GridCell.Tab.0.left" timestamp="1581515014484">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="242" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581936409145" />
+    <state width="1493" height="265" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1584261277324" />
+    <state width="1493" height="265" key="GridCell.Tab.0.left" timestamp="1584261277324">
+      <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1493" height="242" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581515014484" />
-    <state width="1493" height="242" key="GridCell.Tab.0.right" timestamp="1581515014484">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="242" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581936409145" />
+    <state width="1493" height="265" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1584261277324" />
+    <state width="1493" height="265" key="GridCell.Tab.0.right" timestamp="1584261277324">
+      <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state width="1493" height="242" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581515014484" />
-    <state x="461" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1581506421801">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1493" height="242" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581936409145" />
+    <state width="1493" height="265" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1584261277324" />
+    <state x="461" y="274" key="com.intellij.ide.util.TipDialog" timestamp="1584192351663">
+      <screen x="0" y="30" width="1536" height="834" />
     </state>
-    <state x="461" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1581506421801" />
+    <state x="461" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582093885030" />
+    <state x="461" y="274" key="com.intellij.ide.util.TipDialog/0.30.1536.834@0.30.1536.834" timestamp="1584192351663" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1580194750607">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1580194750607" />
+    <state x="490" y="359" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1584094413343">
+      <screen x="0" y="30" width="1536" height="834" />
+    </state>
+    <state x="490" y="359" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.30.1536.834@0.30.1536.834" timestamp="1584094413343" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FeatureWeb$run.coverage" NAME="run Coverage Results" MODIFIED="1584170517403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FeatureWeb$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1581512189708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/FeatureWeb$FeatureWeb.coverage" NAME="FeatureWeb Coverage Results" MODIFIED="1581514102732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/FeatureWeb$FeatureWeb.coverage" NAME="FeatureWeb Coverage Results" MODIFIED="1584261221625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
