@@ -244,15 +244,18 @@ def draw_word_cloud():
 
 
 @app.route('/')
-def hello_world():
+def login_ui():
     # draw_word_cloud()
     return render_template('login.html')
 
 
-@app.route('/detect')
-def detect_ui():
+@app.route('/start')
+def start_ui():
     return render_template('start.html')
 
+@app.route('/detect')
+def detect_ui():
+    return render_template('detect.html')
 
 @app.route('/about')
 def about_ui():

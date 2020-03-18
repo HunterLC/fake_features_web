@@ -103,7 +103,7 @@
                 data: $('#loginform').serialize(),
                 success: function (result) {
                     if (result.msg == 'success') {
-                        window.location.href="{{ url_for('detect_ui') }}";
+                        window.location.href="{{ url_for('start_ui') }}";
                     }
                     else
                         alert("密码错误");
