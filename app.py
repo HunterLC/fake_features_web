@@ -2,16 +2,49 @@ from flask import Flask, request,jsonify, render_template
 from flask_cors import *
 import numpy as np
 import pandas as pd
+from sklearn import model_selection, metrics
 from wordcloud import WordCloud
 import matplotlib.image as mpimg
 from decimal import *
-
+from sklearn.externals import joblib
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
 
 user_csv_path = r'G:\毕设\数据集\微博\user.csv'
+fusion_no_object_csv_path = r'static\model\fusion_features_0306_no_object.csv'
+selected_features_data_path = r'static\model\data_selection.txt'
+sklearn_model_path = r'static\model\train_model.m'
 
+def get_selected_features(path=selected_features_data_path):
+    """
+    加载特征选择后保留的特征列表
+    :return:
+    """
+    my_words = []
+    f = open(path, "r", encoding='UTF-8')
+    for eachWord in f.readlines():
+        my_words.append(eachWord.strip())
+    f.close()
+    return my_words
+
+selected_features = get_selected_features()
+selected_features.append('label')
+
+def save_model(model, model_path):
+    """
+    保存训练好的sklearn分类预测模型
+    """
+    joblib.dump(model, model_path)
+    print("模型已经保存在" + model_path)
+
+
+def load_model(model_path):
+    """
+    加载之前训练好的sklearn分类预测模型
+    """
+    model = joblib.load(model_path)
+    return model
 
 def user_data_read():
     '''
@@ -246,6 +279,7 @@ def draw_word_cloud():
 @app.route('/')
 def login_ui():
     # draw_word_cloud()
+    detect_test_model()
     return render_template('login.html')
 
 
@@ -260,6 +294,28 @@ def detect_ui():
 @app.route('/about')
 def about_ui():
     return render_template('about.html')
+
+
+@app.route('/detect/test')
+def detect_test_model():
+    print("前端正在检测新闻...")
+    df = pd.read_csv(fusion_no_object_csv_path, usecols=selected_features)
+    label = 'label'
+    df.fillna(0, inplace=True)
+    X_train, X_test, y_train, y_test = model_selection.train_test_split(df.drop(label, axis=1),
+                                                                        df['label'],
+                                                                        test_size=0.25,
+                                                                        random_state=1234)
+    model = load_model(sklearn_model_path)
+    rf_pred = model.predict(X_test)
+    print('随机森林ACC：\n', metrics.accuracy_score(y_test, rf_pred))
+    print('随机森林F 1：\n', metrics.f1_score(y_test, rf_pred, average='weighted'))
+    print('随机森林AUC：\n', metrics.roc_auc_score(y_test, rf_pred))
+    response = {"status": 200,
+                "acc": str(metrics.accuracy_score(y_test, rf_pred)),
+                "f1": str(metrics.f1_score(y_test, rf_pred, average='weighted')),
+                "riseRatio": str(metrics.roc_auc_score(y_test, rf_pred))}
+    return jsonify(response)
 
 
 @app.route('/getTable', methods=['POST', 'GET'])
