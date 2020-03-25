@@ -279,7 +279,7 @@ def draw_word_cloud():
 @app.route('/')
 def login_ui():
     # draw_word_cloud()
-    detect_test_model()
+    # detect_test_model()
     return render_template('login.html')
 
 
@@ -296,7 +296,7 @@ def about_ui():
     return render_template('about.html')
 
 
-@app.route('/detect/test')
+@app.route('/detect/test', methods=['POST', 'GET'])
 def detect_test_model():
     print("前端正在检测新闻...")
     df = pd.read_csv(fusion_no_object_csv_path, usecols=selected_features)
@@ -314,7 +314,7 @@ def detect_test_model():
     response = {"status": 200,
                 "acc": str(metrics.accuracy_score(y_test, rf_pred)),
                 "f1": str(metrics.f1_score(y_test, rf_pred, average='weighted')),
-                "riseRatio": str(metrics.roc_auc_score(y_test, rf_pred))}
+                "auc": str(metrics.roc_auc_score(y_test, rf_pred))}
     return jsonify(response)
 
 

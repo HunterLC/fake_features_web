@@ -4,7 +4,8 @@
     <list default="true" id="08c185d0-c77f-4dc5-a41f-f80fd1f45bd7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/detect.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/detect.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/start.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Flask Main" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -50,7 +51,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/model" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/plugins" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -63,8 +64,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\PythonCode\FeatureWeb\static\model" />
       <recent name="E:\PythonCode\FeatureWeb\static\plugins" />
+      <recent name="E:\PythonCode\FeatureWeb\static\model" />
       <recent name="E:\PythonCode\FeatureWeb\static\image" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -191,7 +192,7 @@
       <workItem from="1584596772011" duration="519000" />
       <workItem from="1584945023148" duration="641000" />
       <workItem from="1585034082170" duration="34000" />
-      <workItem from="1585119059690" duration="1830000" />
+      <workItem from="1585119059690" duration="7179000" />
     </task>
     <servers />
   </component>
@@ -212,26 +213,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581512183448" />
-    <state width="1493" height="232" key="GridCell.Tab.0.bottom" timestamp="1585120264003">
+    <state width="1493" height="232" key="GridCell.Tab.0.bottom" timestamp="1585126837246">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1493" height="242" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581936409145" />
-    <state width="1493" height="232" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1585120264003" />
-    <state width="1493" height="232" key="GridCell.Tab.0.center" timestamp="1585120264003">
+    <state width="1493" height="232" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1585126837246" />
+    <state width="1493" height="232" key="GridCell.Tab.0.center" timestamp="1585126837246">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1493" height="242" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581936409145" />
-    <state width="1493" height="232" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1585120264003" />
-    <state width="1493" height="232" key="GridCell.Tab.0.left" timestamp="1585120264003">
+    <state width="1493" height="232" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1585126837246" />
+    <state width="1493" height="232" key="GridCell.Tab.0.left" timestamp="1585126837246">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1493" height="242" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581936409145" />
-    <state width="1493" height="232" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1585120264003" />
-    <state width="1493" height="232" key="GridCell.Tab.0.right" timestamp="1585120264003">
+    <state width="1493" height="232" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1585126837246" />
+    <state width="1493" height="232" key="GridCell.Tab.0.right" timestamp="1585126837246">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1493" height="242" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581936409145" />
-    <state width="1493" height="232" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1585120264003" />
+    <state width="1493" height="232" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1585126837246" />
     <state x="461" y="274" key="com.intellij.ide.util.TipDialog" timestamp="1585119187087">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
@@ -249,6 +250,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/FeatureWeb$run.coverage" NAME="run Coverage Results" MODIFIED="1584170517403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FeatureWeb$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1581512189708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/FeatureWeb$FeatureWeb.coverage" NAME="FeatureWeb Coverage Results" MODIFIED="1585120209638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FeatureWeb$FeatureWeb.coverage" NAME="FeatureWeb Coverage Results" MODIFIED="1585126720613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
