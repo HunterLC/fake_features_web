@@ -12,9 +12,9 @@ app = Flask(__name__)
 CORS(app, supports_credentials=True)
 
 user_csv_path = r'G:\毕设\数据集\微博\user.csv'
-fusion_no_object_csv_path = r'static\model\fusion_features_0306_no_object.csv'
-selected_features_data_path = r'static\model\data_selection.txt'
-sklearn_model_path = r'static\model\train_model.m'
+fusion_no_object_csv_path = r'./static/model/fusion_features_0306_no_object.csv'
+selected_features_data_path = r'./static/model/data_selection.txt'
+sklearn_model_path = r'./static/model/train_model.m'
 
 def get_selected_features(path=selected_features_data_path):
     """
