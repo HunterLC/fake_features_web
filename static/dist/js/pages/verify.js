@@ -4,9 +4,10 @@ const Toast = Swal.mixin({toast: true,
                           timer: 3000
                          });
 $('#verify_button').on('click', function() {
+
         Toast.fire({
                     type: 'info',
-                    title: '检验中，请稍后...'});
+                    title: '上传数据中，请稍后...'});
         $.ajax({
             //几个参数需要注意一下
                 type: "POST",//方法类型
@@ -18,12 +19,15 @@ $('#verify_button').on('click', function() {
                         type: 'success',
                         title: '检验完成'
                     });
+                    document.getElementById("detect_result").innerHTML='真';
                     document.getElementById("acc_score").innerHTML=result.acc;
                     document.getElementById("f1_score").innerHTML=result.f1;
                     document.getElementById("auc_score").innerHTML=result.auc;
+
                 },
                 error : function() {
                     alert("异常！");
                 }
             });
+
     });

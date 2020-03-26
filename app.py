@@ -31,6 +31,7 @@ def get_selected_features(path=selected_features_data_path):
 selected_features = get_selected_features()
 selected_features.append('label')
 
+
 def save_model(model, model_path):
     """
     保存训练好的sklearn分类预测模型
@@ -286,6 +287,10 @@ def login_ui():
 @app.route('/start')
 def start_ui():
     return render_template('start.html')
+
+@app.route('/model')
+def model_ui():
+    return render_template('model.html')
 
 @app.route('/detect')
 def detect_ui():

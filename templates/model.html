@@ -13,6 +13,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="/static/plugins/fontawesome-free/css/all.min.css">
+  <!-- jsGrid -->
+  <link rel="stylesheet" href="/static/plugins/jsgrid/jsgrid.min.css">
+  <link rel="stylesheet" href="/static/plugins/jsgrid/jsgrid-theme.min.css">
   <!-- Ekko Lightbox -->
   <link rel="stylesheet" href="/static/plugins/ekko-lightbox/ekko-lightbox.css">
   <!-- jsGrid -->
@@ -185,13 +188,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/model" class="nav-link">
+                <a href="" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>模型信息</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link active">
+                <a href="/detect" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>新闻检测</p>
                 </a>
@@ -221,12 +224,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">新闻检测</h1>
+            <h1 class="m-0 text-dark">模型信息</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="">功能菜单</a></li>
-              <li class="breadcrumb-item active">新闻检测</li>
+              <li class="breadcrumb-item active">模型信息</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -238,41 +241,226 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="content">
       <div class="container-fluid">
            <!-- general form elements -->
-            <div class="card card-primary">
+          <div class="row">
+            <div class="col-md-4">
+            <div class="card card-success">
               <div class="card-header">
-                <h3 class="card-title">检测模块</h3>
+                <h3 class="card-title">ACC分数</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                </div>
+                <!-- /.card-tools -->
               </div>
               <!-- /.card-header -->
-              <!-- form start -->
-              <form role="form" id="detect_form" method="post">
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="exampleInputFile">选择数据集</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile" onchange="fileImport();" accept=".csv" name="txt">
-                        <label class="custom-file-label" for="exampleInputFile">选择数据集</label>
-                      </div>
-                      <div class="input-group-append">
-                        <button class="input-group-text" id="upload_button">上传</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                      <label for="exampleInputFile">检测结果</label>
-                      <div class="input-group">
-                          <i class="pl-1" id="detect_result">检测结果</i>
-                      </div>
-                  </div>
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <button type="button" class="btn btn-primary" id="verify_button">验证</button>
-                </div>
-              </form>
+              <div class="card-body" id="acc_score">
+                0.958
+              </div>
+              <!-- /.card-body -->
             </div>
             <!-- /.card -->
+            </div>
+            <!-- /.col -->
+
+            <div class="col-md-4">
+            <div class="card card-success">
+              <div class="card-header">
+                <h3 class="card-title">F1分数</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body" id="f1_score">
+                0.958
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+            </div>
+            <!-- /.col -->
+
+            <div class="col-md-4">
+            <div class="card card-success">
+              <div class="card-header">
+                <h3 class="card-title">AUC</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                </div>
+                <!-- /.card-tools -->
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body" id="auc_score">
+                0.958
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+            </div>
+            <!-- /.col -->
+          </div>
+
+          <div class="row">
+              <div class="col-md-4">
+                  <!-- 折线card -->
+                  <div class="card card-primary card-outline">
+              <div class="card-header border-0">
+                <div class="d-flex justify-content-between">
+                  <h3 class="card-title">预测性能展示</h3>
+                  <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="position-relative mb-4">
+                  <canvas id="performance-chart" height="200"></canvas>
+                </div>
+
+                <div class="d-flex flex-row justify-content-start">
+                  <span class="mr-2">
+                    <i class="fas fa-square text-primary"></i> 特征选择后
+                  </span>
+
+                  <span>
+                    <i class="fas fa-square text-gray"></i> 无特征选择
+                  </span>
+                </div>
+                  <div class="d-flex border-0">
+                  <p class="d-flex flex-column">
+                    <span class="text-bold text-lg">7</span>
+                    <span>测试次数</span>
+                  </p>
+                  <p class="ml-auto d-flex flex-column text-right">
+                    <span class="text-success">
+                      <i class="fas fa-arrow-up" id="performance-score">12.5%</i>
+                    </span>
+                    <span class="text-muted">性能提升</span>
+                  </p>
+                </div>
+                <!-- /.d-flex -->
+              </div>
+            </div>
+                  <!-- /.card -->
+              </div>
+              <div class="col-md-4">
+                  <!-- BAR CHART -->
+                  <div class="card card-primary card-outline">
+              <div class="card-header">
+                <h3 class="card-title">特征选择前后特征个数对比</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <canvas id="barChart" style="min-height: 316px; height: 316px; max-height: 316px; max-width: 100%;"></canvas>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+                  <!-- /.card -->
+              </div>
+              <div class="col-md-4">
+                  <!-- STACKED BAR CHART -->
+                  <div class="card card-primary card-outline">
+              <div class="card-header">
+                <h3 class="card-title">特征选择前后时间性能对比</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <canvas id="stackedBarChart" style="min-height: 316px; height: 316px; max-height: 316px; max-width: 100%;"></canvas>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+                  <!-- /.card -->
+              </div>
+          </div>
+
+          <div class="card card-primary card-outline">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="fas fa-edit"></i>
+              提取的三类特征明细表
+            </h3>
+          </div>
+          <div class="card-body">
+            <h4>点击Tab切换不同特征类别</h4>
+            <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="custom-content-below-home-tab" data-toggle="pill" href="#custom-content-below-home" role="tab" aria-controls="custom-content-below-home" aria-selected="true">文本特征</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="custom-content-below-profile-tab" data-toggle="pill" href="#custom-content-below-profile" role="tab" aria-controls="custom-content-below-profile" aria-selected="false">用户特征</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="custom-content-below-messages-tab" data-toggle="pill" href="#custom-content-below-messages" role="tab" aria-controls="custom-content-below-messages" aria-selected="false">图片特征</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="custom-content-below-tabContent">
+              <div class="tab-pane active" id="custom-content-below-home" role="tabpanel" aria-labelledby="custom-content-below-home-tab">
+                  <div class="card" >
+                    <div class="card-header">
+                      <h3 class="card-title justify-content-center">文本特征列表</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <div id="textFeatures"></div>
+                  </div>
+                  <!-- /.card-body -->
+                  </div>
+                  <!-- /.card -->
+              </div>
+              <div class="tab-pane active" id="custom-content-below-profile" role="tabpanel" aria-labelledby="custom-content-below-profile-tab">
+                  <div class="card" >
+                    <div class="card-header">
+                      <h3 class="card-title justify-content-center">用户特征列表</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <div id="userFeatures"></div>
+                  </div>
+                  <!-- /.card-body -->
+                  </div>
+                  <!-- /.card -->
+              </div>
+              <div class="tab-pane active" id="custom-content-below-messages" role="tabpanel" aria-labelledby="custom-content-below-messages-tab">
+                  <div class="card" >
+                    <div class="card-header">
+                      <h3 class="card-title justify-content-center" id="imgLabel">图片特征列表</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <div id="imageFeatures"></div>
+                  </div>
+                  <!-- /.card-body -->
+                  </div>
+                  <!-- /.card -->
+              </div>
+            </div>
+            <div class="tab-custom-content">
+              <p class="lead mb-0">虚假新闻识别</p>
+            </div>
+          </div>
+          <!-- /.card -->
+        </div>
+          <!-- /.card -->
+
       </div><!-- /.container-fluid -->
 
     </div>
@@ -318,12 +506,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="/static/plugins/ekko-lightbox/ekko-lightbox.min.js"></script>
 <!-- Filterizr-->
 <script src="/static/plugins/filterizr/jquery.filterizr.min.js"></script>
+<!-- jsGrid -->
+<script src="/static/plugins/jsgrid/jsgrid.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/static/dist/js/adminlte.min.js"></script>
 <!-- Sparkline -->
 <script src="/static/plugins/sparklines/sparkline.js"></script>
 <!-- SweetAlert2 -->
 <script src="/static/plugins/sweetalert2/sweetalert2.min.js"></script>
+<!-- FLOT CHARTS -->
+<script src="/static/plugins/flot/jquery.flot.js"></script>
+<!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+<script src="/static/plugins/flot-old/jquery.flot.resize.min.js"></script>
+<!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+<script src="/static/plugins/flot-old/jquery.flot.pie.min.js"></script>
 <!-- OPTIONAL SCRIPTS -->
 <script src="/static/plugins/chart.js/Chart.min.js"></script>
 <script src="/static/dist/js/demo.js"></script>
@@ -334,6 +530,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&ak=fUyCzCH9aSG1GI07iFFB5IVhyYKyEZAW&services=&t=20180823194355"></script>
 <script type="text/javascript" src="/static/plugins/echarts/dist/extension/bmap.min.js"></script>
 <script src="/static/dist/js/pages/verify.js"></script>
+<script src="/static/dist/js/pages/table.js"></script>
+<script src="/static/dist/js/pages/chart.js"></script>
 <!-- bs-custom-file-input -->
 <script src="/static/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 <script type="text/javascript">
@@ -342,45 +540,5 @@ $(document).ready(function () {
 });
 </script>
 
-<script type="text/javascript">
-        //点击导入按钮,使files触发点击事件,然后完成读取文件的操作
-        function fileImport() {
-            //获取读取我文件的File对象
-            var selectedFile = document.getElementById('exampleInputFile').files[0];
-            var name = selectedFile.name;//读取选中文件的文件名
-            var size = selectedFile.size;//读取选中文件的大小
-            console.log("文件名:"+name+"大小:"+size);
-
-            var reader = new FileReader();//这是核心,读取操作就是由它完成.
-            //reader.readAsText(selectedFile);//读取文件的内容,也可以读取文件的URL
-            reader.onload = function () {
-                //当读取完成后回调这个函数,然后此时文件的内容存储到了result中,直接操作即可
-                //console.log(this.result);
-                //upload(this.result)
-            }
-        }
-        //文件上传
-    function upload(binary){
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "/upload");
-        xhr.overrideMimeType("application/octet-stream");
-    //直接发送二进制数据
-        if(xhr.sendAsBinary){
-            xhr.sendAsBinary(binary);
-        }else{
-            xhr.send(binary);
-        }
-
-    // 监听变化
-        xhr.onreadystatechange = function(e){
-            if(xhr.readyState===4){
-                if(xhr.status===200){
-                // 响应成功
-                    console.log('响应成功')
-                }
-            }
-        };
-    }
-</script>
 </body>
 </html>

@@ -91,8 +91,97 @@ function updateChart(){
                     alert("异常！");
                 }
             });
-  }
+}
+
+var areaChartData = {
+      labels  : ['无特征约简数据集', 'PCA+RFE特征选择数据集'],
+      datasets: [
+        {
+          label               : '数据集读取时间',
+          backgroundColor     : 'rgba(60,141,188,0.9)',
+          borderColor         : 'rgba(60,141,188,0.8)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : [36.124, 1.065]
+        },
+        {
+          label               : '数据集模型训练时间',
+          backgroundColor     : 'rgba(210, 214, 222, 1)',
+          borderColor         : 'rgba(210, 214, 222, 1)',
+          pointRadius         : false,
+          pointColor          : 'rgba(210, 214, 222, 1)',
+          pointStrokeColor    : '#c1c7d1',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(220,220,220,1)',
+          data                : [141.857, 7.845]
+        },
+      ]
+    }
+
+var stackedBarChartCanvas = $('#stackedBarChart').get(0).getContext('2d')
+var stackedBarChartData = jQuery.extend(true, {}, areaChartData)
+
+var stackedBarChartOptions = {
+      responsive              : true,
+      maintainAspectRatio     : false,
+      scales: {
+        xAxes: [{
+          stacked: true,
+        }],
+        yAxes: [{
+          stacked: true
+        }]
+      }
+};
+
+var stackedBarChart = new Chart(stackedBarChartCanvas, {
+      type: 'bar',
+      data: stackedBarChartData,
+      options: stackedBarChartOptions
+});
+
+//-------------
+    //- BAR CHART -
+    //-------------
+
+var featureChartData = {
+      labels  : ['原始特征', 'PCA','PCA+RFE','PCA+Filter+RFE'],
+      datasets: [
+        {
+          label               : ['特征个数'],
+          backgroundColor     : 'rgba(60,141,188,0.9)',
+          borderColor         : 'rgba(60,141,188,0.8)',
+          pointRadius          : false,
+          pointColor          : '#3b8bba',
+          pointStrokeColor    : 'rgba(60,141,188,1)',
+          pointHighlightFill  : '#fff',
+          pointHighlightStroke: 'rgba(60,141,188,1)',
+          data                : [2459, 144, 97, 70]
+        }
+      ]
+    };
+    var barChartCanvas = $('#barChart').get(0).getContext('2d');
+    var barChartData = jQuery.extend(true, {}, featureChartData);
+    var temp0 = featureChartData.datasets[0];
+    barChartData.datasets[0] = temp0;
+
+    var barChartOptions = {
+      responsive              : true,
+      maintainAspectRatio     : false,
+      datasetFill             : false
+    };
+
+    var barChart = new Chart(barChartCanvas, {
+      type: 'bar',
+      data: barChartData,
+      options: barChartOptions
+    });
+
+
 $(document).ready(function() {
             //每隔3s自动调用方法，实现图表的实时更新
     t1 = window.setTimeout(updateChart,5000);
-  });
+});

@@ -46,7 +46,7 @@
         height: "100%",
         width: "100%",
         sorting: true,
-        paging: true,
+        paging: false,
 
         data: [
             {Name: "user_gender", Meaning: "用户性别", Type: "object", Note: "男、女"},
@@ -71,7 +71,7 @@
         width: "100%",
 
         sorting: true,
-        paging: true,
+        paging: false,
 
         data: [
             {Name: "sim_image_word", Meaning: "图文相似度", Type: "float", Note: "采用词嵌入方式，减少中英翻译误差中的影响"},
