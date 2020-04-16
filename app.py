@@ -254,6 +254,10 @@ def draw_word_cloud():
         chinese_text = f.readlines()
         text_1 = chinese_text[0:19188]
         text_2 = chinese_text[19188:]
+        text_2_new = []
+        for item in text_2:
+            if item.find('锦绣') == -1:
+                text_2_new.append(item)
 
     # 设置背景图片
     background_img = mpimg.imread('./static/image/mapmask.jpg')
@@ -273,7 +277,7 @@ def draw_word_cloud():
     # 中文
     wc.generate(" ".join(text_1))
     wc.to_file("./static/image/wordcloud_1.png")
-    wc.generate(" ".join(text_2))
+    wc.generate(" ".join(text_2_new))
     wc.to_file("./static/image/wordcloud_2.png")
 
 

@@ -159,7 +159,7 @@ var featureChartData = {
           pointStrokeColor    : 'rgba(60,141,188,1)',
           pointHighlightFill  : '#fff',
           pointHighlightStroke: 'rgba(60,141,188,1)',
-          data                : [2459, 144, 97, 70]
+          data                : [2191, 144, 97, 70]
         }
       ]
     };
