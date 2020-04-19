@@ -320,10 +320,14 @@ def detect_test_model():
     print('随机森林ACC：\n', metrics.accuracy_score(y_test, rf_pred))
     print('随机森林F 1：\n', metrics.f1_score(y_test, rf_pred, average='weighted'))
     print('随机森林AUC：\n', metrics.roc_auc_score(y_test, rf_pred))
+    map = [{"Id": "1", "Content": "哈哈哈哈", "Type": "真"},
+           {"Id": "2", "Content": "嘻嘻嘻嘻", "Type": "假"},
+           {"Id": "3", "Content": "嘤嘤嘤嘤", "Type": "真"}]
     response = {"status": 200,
                 "acc": str(metrics.accuracy_score(y_test, rf_pred)),
                 "f1": str(metrics.f1_score(y_test, rf_pred, average='weighted')),
-                "auc": str(metrics.roc_auc_score(y_test, rf_pred))}
+                "auc": str(metrics.roc_auc_score(y_test, rf_pred)),
+                "result": map}
     return jsonify(response)
 
 

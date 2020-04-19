@@ -1,5 +1,5 @@
 var ChartData_four = {
-      labels  : ['原始特征','PCA+RFE','PCA+Filter+RFE','PCA+Xgboost'],
+      labels  : ['原始特征','PCA+RFE','PCA+Filter+RFE','PCA+SelectFromModel+Xgboost'],
       datasets: [
         {
           label               : ['ACC'],
@@ -10,7 +10,7 @@ var ChartData_four = {
           pointStrokeColor    : 'rgba(60,141,188,1)',
           pointHighlightFill  : '#fff',
           pointHighlightStroke: 'rgba(60,141,188,1)',
-          data                : [0.9020, 0.9418, 0.9404, 0.9404]
+          data                : [0.9020, 0.9475, 0.9435, 0.9404]
         },
         {
           label               : ['AUC'],
@@ -21,7 +21,7 @@ var ChartData_four = {
           pointStrokeColor    : 'rgba(210, 214, 222, 1)',
           pointHighlightFill  : '#fff',
           pointHighlightStroke: 'rgba(220,220,220,1)',
-          data                : [0.9028, 0.9423, 0.9407, 0.9404]
+          data                : [0.9028, 0.9477, 0.9436, 0.9404]
         },
         {
           label               : ['F1'],
@@ -32,7 +32,7 @@ var ChartData_four = {
           pointStrokeColor    : 'rgba(34 ,139 ,34,1)',
           pointHighlightFill  : '#fff',
           pointHighlightStroke: 'rgba(34 ,139 ,34,1)',
-          data                : [0.9018, 0.9418, 0.9404, 0.9404]
+          data                : [0.9018, 0.9475, 0.9435, 0.9404]
         }
       ]
 };

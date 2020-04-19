@@ -13,6 +13,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="/static/plugins/fontawesome-free/css/all.min.css">
+  <!-- jsGrid -->
+  <link rel="stylesheet" href="/static/plugins/jsgrid/jsgrid.min.css">
+  <link rel="stylesheet" href="/static/plugins/jsgrid/jsgrid-theme.min.css">
   <!-- Ekko Lightbox -->
   <link rel="stylesheet" href="/static/plugins/ekko-lightbox/ekko-lightbox.css">
   <!-- jsGrid -->
@@ -40,17 +43,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </li>
     </ul>
 
-    <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
-      <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="搜索..." aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
@@ -260,9 +252,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </div>
                   <div class="form-group">
                       <label for="exampleInputFile">检测结果</label>
-                      <div class="input-group">
-                          <i class="pl-1" id="detect_result">检测结果</i>
-                      </div>
+                      <div id="detectResult"></div>
                   </div>
                 </div>
                 <!-- /.card-body -->
@@ -322,6 +312,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="/static/dist/js/adminlte.min.js"></script>
 <!-- Sparkline -->
 <script src="/static/plugins/sparklines/sparkline.js"></script>
+<!-- jsGrid -->
+<script src="/static/plugins/jsgrid/jsgrid.min.js"></script>
 <!-- SweetAlert2 -->
 <script src="/static/plugins/sweetalert2/sweetalert2.min.js"></script>
 <!-- OPTIONAL SCRIPTS -->

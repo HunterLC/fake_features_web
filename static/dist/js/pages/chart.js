@@ -105,7 +105,7 @@ var areaChartData = {
           pointStrokeColor    : 'rgba(60,141,188,1)',
           pointHighlightFill  : '#fff',
           pointHighlightStroke: 'rgba(60,141,188,1)',
-          data                : [36.124, 1.065]
+          data                : [36.964, 1.500]
         },
         {
           label               : '数据集模型训练时间',
@@ -116,7 +116,7 @@ var areaChartData = {
           pointStrokeColor    : '#c1c7d1',
           pointHighlightFill  : '#fff',
           pointHighlightStroke: 'rgba(220,220,220,1)',
-          data                : [141.857, 7.845]
+          data                : [119.376, 8.607]
         },
       ]
     }
@@ -159,7 +159,7 @@ var featureChartData = {
           pointStrokeColor    : 'rgba(60,141,188,1)',
           pointHighlightFill  : '#fff',
           pointHighlightStroke: 'rgba(60,141,188,1)',
-          data                : [2191, 144, 97, 70]
+          data                : [2155, 108, 88, 68]
         }
       ]
     };

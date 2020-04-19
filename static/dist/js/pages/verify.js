@@ -3,6 +3,24 @@ const Toast = Swal.mixin({toast: true,
                           showConfirmButton: false,
                           timer: 3000
                          });
+var resultTable = $("#detectResult").jsGrid({
+        height: "100%",
+        width: "100%",
+
+        sorting: false,
+        paging: false,
+
+        data: [
+            {Id: "X", Content: "XXXXX", Type: "X"}
+        ],
+
+        fields: [
+            { name: "Id", type: "text", width: 10, title: "编号" },
+            { name: "Content", type: "text", width: 200, title: "新闻内容" },
+            { name: "Type", type: "text", width: 10, title: "检测结果" }
+        ]
+});
+
 $('#verify_button').on('click', function() {
 
         Toast.fire({
@@ -19,7 +37,20 @@ $('#verify_button').on('click', function() {
                         type: 'success',
                         title: '检验完成'
                     });
-                    document.getElementById("detect_result").innerHTML='真';
+                    var result_res = [];
+                    data = result.result;
+                    console.log(data);
+                    for (var i = 0; i < data.length; i++) {
+                        result_res.push({
+                            Id: data[i].Id,
+                            Content: data[i].Content,
+                            Type: data[i].Type
+                        });
+                    }
+                    console.log(result_res);
+                    resultTable.jsGrid({
+                        data: result_res
+                    });
                     document.getElementById("acc_score").innerHTML=result.acc;
                     document.getElementById("f1_score").innerHTML=result.f1;
                     document.getElementById("auc_score").innerHTML=result.auc;
