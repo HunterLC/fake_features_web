@@ -303,13 +303,85 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
           <!-- /.card -->
 
-          <h5 class="m-0 text-dark">特征选择</h5>
+          <h5 class="m-0 text-dark">四种特征选择算法对比</h5>
+
+          <div class="row">
+              <div class="col-md-6">
+                  <!-- BAR CHART -->
+                  <div class="card card-primary card-outline">
+              <div class="card-header">
+                <h3 class="card-title">特征子集规模对比</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <canvas id="barChart_1" style="min-height: 316px; height: 316px; max-height: 316px; max-width: 100%;"></canvas>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+                  <!-- /.card -->
+              </div>
+              <div class="col-md-6">
+                  <!-- BAR CHART -->
+                  <div class="card card-primary card-outline">
+              <div class="card-header">
+                <h3 class="card-title">算法运行效率对比</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <canvas id="barChart_fstime_1" style="min-height: 316px; height: 316px; max-height: 316px; max-width: 100%;"></canvas>
+                </div>
+              </div>
+              <!-- /.card-body -->
+            </div>
+                  <!-- /.card -->
+              </div>
+          </div>
+
+          <div class="card card-primary">
+              <div class="card-header">
+                <div class="card-title">
+                  分类检测结果
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <a href="/static/image/4-4-1.png" data-toggle="lightbox" data-title="ACC百分比" data-gallery="gallery">
+                      <img src="/static/image/4-4-1.png" class="img-fluid mb-2" alt="acc"/>
+                    </a>
+                  </div>
+                  <div class="col-sm-4">
+                    <a href="/static/image/4-4-2.png" data-toggle="lightbox" data-title="F1百分比" data-gallery="gallery">
+                      <img src="/static/image/4-4-2.png" class="img-fluid mb-2" alt="f1"/>
+                    </a>
+                  </div>
+                    <div class="col-sm-4">
+                    <a href="/static/image/4-4-3.png" data-toggle="lightbox" data-title="AUC百分比" data-gallery="gallery">
+                      <img src="/static/image/4-4-3.png" class="img-fluid mb-2" alt="auc"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <h5 class="m-0 text-dark">X2-RFE-RF特征选择算法有效性</h5>
           <div class="row">
               <div class="col-md-4">
                   <!-- BAR CHART -->
                   <div class="card card-primary card-outline">
               <div class="card-header">
-                <h3 class="card-title">特征选择前后特征个数对比</h3>
+                <h3 class="card-title">各阶段特征个数对比</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -329,7 +401,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <!-- STACKED BAR CHART -->
                   <div class="card card-primary card-outline">
               <div class="card-header">
-                <h3 class="card-title">特征选择前后时间性能对比</h3>
+                <h3 class="card-title">分类时间性能</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -345,11 +417,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
                   <!-- /.card -->
               </div>
+              <!--
               <div class="col-md-4">
-                  <!-- BAR CHART -->
                   <div class="card card-primary card-outline">
               <div class="card-header">
-                <h3 class="card-title">特征选择过程时间性能对比</h3>
+                <h3 class="card-title">分类时间性能</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
@@ -361,13 +433,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <canvas id="barChart_fstime" style="min-height: 316px; height: 316px; max-height: 316px; max-width: 100%;"></canvas>
                 </div>
               </div>
-              <!-- /.card-body -->
             </div>
-                  <!-- /.card -->
               </div>
+              -->
+              <div class="col-md-4">
+                  <div class="card card-primary card-outline">
+              <div class="card-header">
+                <h3 class="card-title">分类三大指标</h3>
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="chart">
+                  <canvas id="barChart_four_1" style="min-height: 316px; height: 316px; max-height: 316px; max-width: 100%;"></canvas>
+                </div>
+              </div>
+            </div>
+              </div>
+
           </div>
 
-          <!-- BAR CHART -->
+          <!--
           <div class="card card-primary card-outline">
               <div class="card-header">
                 <h3 class="card-title">三大指标柱状图</h3>
@@ -381,11 +469,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <canvas id="barChart_four" style="min-height: 316px; height: 316px; max-height: 316px; max-width: 100%;"></canvas>
                 </div>
               </div>
-              <!-- /.card-body -->
             </div>
-          <!-- /.card -->
-
-          <h5 class="m-0 text-dark">选定模型信息</h5>
+            -->
+          <h5 class="m-0 text-dark">最优特征子集信息</h5>
           <div class="card card-primary card-outline">
               <div class="card-header">
                 <h3 class="card-title">特征重要性分数图</h3>
@@ -455,105 +541,52 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
           </div>
 
-          <div class="row">
-              <div class="col-md-8">
-                  <!-- 折线card -->
-                  <div class="card card-primary card-outline">
-              <div class="card-header border-0">
-                <div class="d-flex justify-content-between">
-                  <h3 class="card-title">预测性能展示</h3>
-                  <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                  </button>
-                </div>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="position-relative mb-4">
-                  <canvas id="performance-chart" height="180"></canvas>
-                </div>
-
-                <div class="d-flex flex-row justify-content-start">
-                  <span class="mr-2">
-                    <i class="fas fa-square text-primary"></i> 特征选择后
-                  </span>
-
-                  <span>
-                    <i class="fas fa-square text-gray"></i> 无特征选择
-                  </span>
-                </div>
-                  <div class="d-flex border-0">
-                  <p class="d-flex flex-column">
-                    <span class="text-bold text-lg">7</span>
-                    <span>测试次数</span>
-                  </p>
-                  <p class="ml-auto d-flex flex-column text-right">
-                    <span class="text-success">
-                      <i class="fas fa-arrow-up" id="performance-score">12.5%</i>
-                    </span>
-                    <span class="text-muted">性能提升</span>
-                  </p>
-                </div>
-                <!-- /.d-flex -->
-              </div>
-            </div>
-                  <!-- /.card -->
-              </div>
-              <div class="col-md-4">
-                <div class="card card-success">
-              <div class="card-header">
-                <h3 class="card-title">ACC分数</h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                  </button>
-                </div>
-                <!-- /.card-tools -->
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body" id="acc_score">
-                0.958
-              </div>
-              <!-- /.card-body -->
-            </div>
-                <!-- /.card -->
-                <div class="card card-success">
-              <div class="card-header">
-                <h3 class="card-title">F1分数</h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                  </button>
-                </div>
-                <!-- /.card-tools -->
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body" id="f1_score">
-                0.958
-              </div>
-              <!-- /.card-body -->
-            </div>
-                <!-- /.card -->
-                <div class="card card-success">
-              <div class="card-header">
-                <h3 class="card-title">AUC</h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                  </button>
-                </div>
-                <!-- /.card-tools -->
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body" id="auc_score">
-                0.958
-              </div>
-              <!-- /.card-body -->
-            </div>
-                <!-- /.card -->
-              </div>
-              <!-- /.col -->
-          </div>
+{#          <div class="row">#}
+{#              <div class="col-md-8">#}
+{#                  <!-- 折线card -->#}
+{#                  <div class="card card-primary card-outline">#}
+{#              <div class="card-header border-0">#}
+{#                <div class="d-flex justify-content-between">#}
+{#                  <h3 class="card-title">预测性能展示</h3>#}
+{#                  <div class="card-tools">#}
+{#                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>#}
+{#                  </button>#}
+{#                </div>#}
+{#                </div>#}
+{#              </div>#}
+{#              <div class="card-body">#}
+{#                <div class="position-relative mb-4">#}
+{#                  <canvas id="performance-chart" height="180"></canvas>#}
+{#                </div>#}
+{##}
+{#                <div class="d-flex flex-row justify-content-start">#}
+{#                  <span class="mr-2">#}
+{#                    <i class="fas fa-square text-primary"></i> 特征选择后#}
+{#                  </span>#}
+{##}
+{#                  <span>#}
+{#                    <i class="fas fa-square text-gray"></i> 无特征选择#}
+{#                  </span>#}
+{#                </div>#}
+{#                  <div class="d-flex border-0">#}
+{#                  <p class="d-flex flex-column">#}
+{#                    <span class="text-bold text-lg">7</span>#}
+{#                    <span>测试次数</span>#}
+{#                  </p>#}
+{#                  <p class="ml-auto d-flex flex-column text-right">#}
+{#                    <span class="text-success">#}
+{#                      <i class="fas fa-arrow-up" id="performance-score">12.5%</i>#}
+{#                    </span>#}
+{#                    <span class="text-muted">性能提升</span>#}
+{#                  </p>#}
+{#                </div>#}
+{#                <!-- /.d-flex -->#}
+{#              </div>#}
+{#            </div>#}
+{#                  <!-- /.card -->#}
+{#              </div>#}
+{#              <!-- /.col -->#}
+{#          </div>#}
 
 
 
@@ -640,6 +673,16 @@ $(document).ready(function () {
   bsCustomFileInput.init();
 });
 </script>
-
+<!-- Page specific script -->
+<script>
+  $(function () {
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox({
+        alwaysShowClose: true
+      });
+    });
+  })
+</script>
 </body>
 </html>
