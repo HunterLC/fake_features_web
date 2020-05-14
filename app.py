@@ -12,8 +12,9 @@ app = Flask(__name__)
 CORS(app, supports_credentials=True)
 
 user_csv_path = r'G:\毕设\数据集\微博\user.csv'
-fusion_no_object_csv_path = r'./static/model/fusion_features_0306_no_object.csv'
-selected_features_data_path = r'./static/model/data_selection.txt'
+fusion_no_object_csv_path = r'./static/model/fusion_news_features_0404_no_dup.csv'
+main_test_path = r'./static/model/test.csv'
+selected_features_data_path = r'./static/model/0404_filter_rfe_no_dup_0410.txt'
 sklearn_model_path = r'./static/model/train_model.m'
 
 def get_selected_features(path=selected_features_data_path):
@@ -30,6 +31,7 @@ def get_selected_features(path=selected_features_data_path):
 
 selected_features = get_selected_features()
 selected_features.append('label')
+selected_features.append('text_file')
 
 
 def save_model(model, model_path):
@@ -308,21 +310,28 @@ def about_ui():
 @app.route('/detect/test', methods=['POST', 'GET'])
 def detect_test_model():
     print("前端正在检测新闻...")
-    df = pd.read_csv(fusion_no_object_csv_path, usecols=selected_features)
+    df = pd.read_csv(main_test_path,usecols=selected_features)
     label = 'label'
     df.fillna(0, inplace=True)
-    X_train, X_test, y_train, y_test = model_selection.train_test_split(df.drop(label, axis=1),
-                                                                        df['label'],
-                                                                        test_size=0.25,
-                                                                        random_state=1234)
+    # X_train, X_test, y_train, y_test = model_selection.train_test_split(df.drop(label, axis=1),
+    #                                                                     df['label'],
+    #                                                                     test_size=0.25,
+    #                                                                     random_state=1234)
+    X_test = df.drop([label, 'text_file'], axis=1)
+    y_test = df['label']
     model = load_model(sklearn_model_path)
     rf_pred = model.predict(X_test)
-    print('随机森林ACC：\n', metrics.accuracy_score(y_test, rf_pred))
-    print('随机森林F 1：\n', metrics.f1_score(y_test, rf_pred, average='weighted'))
-    print('随机森林AUC：\n', metrics.roc_auc_score(y_test, rf_pred))
-    map = [{"Id": "1", "Content": "#兰渝路·脱贫路##百年兰渝·梦圆陇南#兰渝铁路沿线主要站点：兰州站—渭源站—漳县站—岷县站—宕昌站—陇南站—青川站—广元站—苍溪站—阆中站—南部站—南充站—武胜站—合川站—重庆站", "Type": "真"},
-           {"Id": "2", "Content": "急找孩子，求转，求帮忙实验小学寻人启事13759695559帮忙扩散，今天上午一个三岁多小女孩在锦绣花园小区附近被人拐走了，小女孩能说出她爸爸的手机号码从监控上看是被一个四十多岁男人抱走了现大人都急疯了有知情者请告之万分感谢看到信息的兄弟姐妹留意一下联系人张静杰13759695559", "Type": "假"},
-           {"Id": "3", "Content": "【七一路街道开展文明交通劝导活动】为全面落实文明出行主题实践活动，进一步提升省级文明城市形象，近日，七一路街道组织三个社区三支志愿者队伍共30人在辖区主要交通路口集中开展文明交通劝导活动。活动现场，志愿者通过给过往行人讲解遵守交通秩序的常识、主动搀扶行动不便的老人、孕妇以及抱小孩的群众、耐心劝导违规行驶的驾驶员等活动形式来劝导大家文明出行。本次活动以劝导为主，旨在倡导驾驶员和行人自觉抵制交通陋习，对驾驶员闯红(黄)灯、乱停车、超速行驶、乱穿马路、斑马线不礼让行人等不文明交通行为及行人不走斑马线、闯红灯等不文明行为进行有效引导，切实增强广大驾驶员及行人交通安全和文明意识，进一步提升城市文明程度，让开文明车、行文明路、做文明人、创文明城成为广大居民的自觉行动", "Type": "真"}]
+    # print('随机森林ACC：\n', metrics.accuracy_score(y_test, rf_pred))
+    # print('随机森林F 1：\n', metrics.f1_score(y_test, rf_pred, average='weighted'))
+    # print('随机森林AUC：\n', metrics.roc_auc_score(y_test, rf_pred))
+    map = []
+    i = 0
+    for index, row in df.iterrows():
+        dic = {"Id": str(i+1), "Content": row['text_file'], "Type": "真" if rf_pred[i] == 0 else "假"}
+        map.append(dic)
+        i += 1
+    # user_location = row['user_location']
+
     response = {"status": 200,
                 "acc": str(metrics.accuracy_score(y_test, rf_pred)),
                 "f1": str(metrics.f1_score(y_test, rf_pred, average='weighted')),

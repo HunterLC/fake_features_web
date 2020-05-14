@@ -4,11 +4,10 @@
     <list default="true" id="08c185d0-c77f-4dc5-a41f-f80fd1f45bd7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dist/js/pages/barchartfstime.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/js/pages/barchartfstime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dist/js/pages/chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/js/pages/chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/dist/js/pages/chartfour.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/js/pages/chartfour.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/dist/img/user2-160x160.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/dist/img/user2-160x160.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/model/fusion_features_0306_no_object.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/model/train_model.m" beforeDir="false" afterPath="$PROJECT_DIR$/static/model/train_model.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/detect.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/detect.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/model.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/model.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/start.html" afterDir="false" />
     </list>
@@ -56,7 +55,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/plugins" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/model" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -69,11 +68,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\PythonCode\FeatureWeb\static\dist\img" />
       <recent name="E:\PythonCode\FeatureWeb\templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\PythonCode\FeatureWeb\static\plugins" />
       <recent name="E:\PythonCode\FeatureWeb\static\model" />
+      <recent name="E:\PythonCode\FeatureWeb\static\plugins" />
       <recent name="E:\PythonCode\FeatureWeb\static\image" />
     </key>
   </component>
@@ -218,6 +218,10 @@
       <workItem from="1587364426563" duration="744000" />
       <workItem from="1587654060134" duration="356000" />
       <workItem from="1588242029528" duration="7015000" />
+      <workItem from="1589355136186" duration="114000" />
+      <workItem from="1589356081121" duration="2238000" />
+      <workItem from="1589380469379" duration="193000" />
+      <workItem from="1589434964900" duration="1535000" />
     </task>
     <servers />
   </component>
@@ -238,42 +242,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1581512183448" />
-    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1588256828477">
+    <state width="1493" height="201" key="GridCell.Tab.0.bottom" timestamp="1589436503524">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1493" height="242" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1581936409145" />
-    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1588256828477" />
-    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1588256828476">
+    <state width="1493" height="201" key="GridCell.Tab.0.bottom/0.30.1536.834@0.30.1536.834" timestamp="1589436503524" />
+    <state width="1493" height="201" key="GridCell.Tab.0.center" timestamp="1589436503524">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1493" height="242" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1581936409145" />
-    <state width="1493" height="171" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1588256828476" />
-    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1588256828476">
+    <state width="1493" height="201" key="GridCell.Tab.0.center/0.30.1536.834@0.30.1536.834" timestamp="1589436503524" />
+    <state width="1493" height="201" key="GridCell.Tab.0.left" timestamp="1589436503523">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1493" height="242" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1581936409145" />
-    <state width="1493" height="171" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1588256828476" />
-    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1588256828477">
+    <state width="1493" height="201" key="GridCell.Tab.0.left/0.30.1536.834@0.30.1536.834" timestamp="1589436503523" />
+    <state width="1493" height="201" key="GridCell.Tab.0.right" timestamp="1589436503524">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state width="1493" height="242" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1581936409145" />
-    <state width="1493" height="171" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1588256828477" />
-    <state x="461" y="274" key="com.intellij.ide.util.TipDialog" timestamp="1587654066592">
+    <state width="1493" height="201" key="GridCell.Tab.0.right/0.30.1536.834@0.30.1536.834" timestamp="1589436503524" />
+    <state x="461" y="274" key="com.intellij.ide.util.TipDialog" timestamp="1589434963775">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="461" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582093885030" />
-    <state x="461" y="274" key="com.intellij.ide.util.TipDialog/0.30.1536.834@0.30.1536.834" timestamp="1587654066592" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1580194750607">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1580194750607" />
+    <state x="461" y="274" key="com.intellij.ide.util.TipDialog/0.30.1536.834@0.30.1536.834" timestamp="1589434963775" />
     <state x="490" y="359" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1584094413343">
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="490" y="359" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.30.1536.834@0.30.1536.834" timestamp="1584094413343" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FeatureWeb$run.coverage" NAME="run Coverage Results" MODIFIED="1588254098184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FeatureWeb$run.coverage" NAME="run Coverage Results" MODIFIED="1589436003148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FeatureWeb$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1581512189708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/FeatureWeb$FeatureWeb.coverage" NAME="FeatureWeb Coverage Results" MODIFIED="1586417805379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
