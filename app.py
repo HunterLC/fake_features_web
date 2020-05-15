@@ -1,12 +1,22 @@
+import gensim
 from flask import Flask, request,jsonify, render_template
 from flask_cors import *
+import re
+import json
+import time
+import jieba
 import numpy as np
 import pandas as pd
 from sklearn import model_selection, metrics
 from wordcloud import WordCloud
 import matplotlib.image as mpimg
+from collections import Counter
 from decimal import *
+import urllib
+import random
+import hashlib
 from sklearn.externals import joblib
+from scipy.linalg import norm
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
@@ -16,6 +26,11 @@ fusion_no_object_csv_path = r'./static/model/fusion_news_features_0404_no_dup.cs
 main_test_path = r'./static/model/test.csv'
 selected_features_data_path = r'./static/model/0404_filter_rfe_no_dup_0410.txt'
 sklearn_model_path = r'./static/model/train_model.m'
+stopwords_path = r'./static/model/stopwords.txt'
+appid = '20190716000318328'
+secretKey = '7pjdBCkaUodI5eNqsBWB'
+url_baidu = 'http://api.fanyi.baidu.com/api/trans/vip/translate'
+en_imagenet_class_path = r'G:\毕设\数据集\微博\imagenet_class_index.json'
 
 def get_selected_features(path=selected_features_data_path):
     """
@@ -29,9 +44,38 @@ def get_selected_features(path=selected_features_data_path):
     f.close()
     return my_words
 
+
+def get_stopwords_list():
+    """
+    获得停用词的列表
+    :return: stopwords：停用词列表
+    """
+    my_stopwords = []
+    fstop = open(stopwords_path, "r", encoding='UTF-8')
+    for eachWord in fstop.readlines():
+        my_stopwords.append(eachWord.strip())
+    fstop.close()
+    return my_stopwords
+
+def jieba_clear_text(text):
+    """
+    jieba分词，并使用自定义停用词表去除停用词以及长度为1的词
+    """
+    text_n= "".join(re.findall(u"[\u4e00-\u9fa5]", text))
+
+    raw_result = "$".join(jieba.cut(text_n))
+    myword_list = []
+    #去除停用词
+    for myword in raw_result.split('$'):
+        if myword not in stopwords:
+            myword_list.append(myword)
+    return " ".join(myword_list)
+
 selected_features = get_selected_features()
 selected_features.append('label')
 selected_features.append('text_file')
+stopwords = get_stopwords_list()
+# model_word2vec = gensim.models.KeyedVectors.load_word2vec_format(r'G:\毕设\数据集\微博\news_12g_baidubaike_20g_novel_90g_embedding_64.bin', binary=True)
 
 
 def save_model(model, model_path):
@@ -294,9 +338,17 @@ def login_ui():
 def start_ui():
     return render_template('start.html')
 
-@app.route('/model')
-def model_ui():
-    return render_template('model.html')
+@app.route('/fextraction')
+def extraction_ui():
+    return render_template('featureextraction.html')
+
+@app.route('/imagetext')
+def imagetext_ui():
+    return render_template('imagetext.html')
+
+@app.route('/fselection')
+def fselection_ui():
+    return render_template('featureselection.html')
 
 @app.route('/detect')
 def detect_ui():
@@ -338,6 +390,8 @@ def detect_test_model():
                 "auc": str(metrics.roc_auc_score(y_test, rf_pred)),
                 "result": map}
     return jsonify(response)
+
+
 
 
 @app.route('/getTable', methods=['POST', 'GET'])
@@ -394,6 +448,101 @@ def login():
 @app.route('/getWordCloud', methods=['POST', 'GET'])
 def get_word_cloud():
     return
+
+def translateBaidu(text, f='en', t='zh'):
+    salt = random.randint(32768, 65536)
+    sign = appid + text + str(salt) + secretKey
+    sign = hashlib.md5(sign.encode()).hexdigest()
+    url = url_baidu + '?appid=' + appid + '&q=' + urllib.parse.quote(text) + '&from=' + f + '&to=' + t + '&salt=' + str(salt) + '&sign=' + sign
+    response = urllib.request.urlopen(url)
+    content = response.read().decode('utf-8')
+    data = json.loads(content)
+    result = str(data['trans_result'][0]['dst'])
+    return result
+
+def image_get_img_word_sim(content, vgg19_class_name, resnet50_class_name, vgg19_score, resnet50_score):
+    """
+    similarity_score = arg max{ log( f_i * c_j * swv(term_i,term_j) ) }
+    1 ≤ i ≤ n, 1 ≤ j ≤m
+    swv(term_i,term_j)即term_i和term_j词向量的余弦相似度
+    f_i即第i个词汇(微博正文)的词频
+    c_j即第j个词汇(图片分类名)的可信度
+    """
+    #微博正文
+    text_content = content
+    if pd.isna(text_content):
+        return 0
+    #去除停用词和英文单词并分词为list
+    list_clear_weibo_text = jieba_clear_text("".join(re.findall(u"[\u4e00-\u9fa5]", text_content))).split(' ')
+    #获得微博正文的词频
+    dict_weibo_text = Counter(list_clear_weibo_text)
+    #获得分类的词向量
+    try:
+        #获取单词的词向量
+        term_vgg19_class_name = model_word2vec[translateBaidu(vgg19_class_name)]
+    except Exception:
+        #word2vec中不存在这个词汇，以64位0补充
+        term_vgg19_class_name = np.zeros(64)
+    try:
+        #获取单词的词向量
+        time.sleep(1)
+        term_resnet50_class_name = model_word2vec[translateBaidu(resnet50_class_name)]
+    except Exception:
+        #word2vec中不存在这个词汇，以64位0补充
+        term_resnet50_class_name = np.zeros(64)
+
+    list_vgg19_sim = []
+    list_resnet50_sim = []
+    #遍历微博正文词频表
+    for(word, frequency) in dict_weibo_text.items():
+        try:
+            #获取单词的词向量
+            term_i = model_word2vec[word]
+        except Exception:
+            #word2vec中不存在这个词汇，以64位0补充
+            term_i = np.zeros(64)
+        if np.all(term_i == 0):
+            list_vgg19_sim.append(0)
+            list_resnet50_sim.append(0)
+            continue
+        if np.all(term_vgg19_class_name == 0):
+            list_vgg19_sim.append(0)
+        if np.all(term_resnet50_class_name == 0):
+            list_resnet50_sim.append(0)
+        if np.all(term_vgg19_class_name != 0):
+            # 计算余弦相似度
+            swv_vgg19 = np.dot(term_i, term_vgg19_class_name) / (norm(term_i) * norm(term_vgg19_class_name))
+            # 计算图文相似度
+            list_vgg19_sim.append(np.log(1 + frequency * float(vgg19_score) * swv_vgg19))
+        if np.all(term_resnet50_class_name != 0):
+            #计算余弦相似度
+            swv_resnet50 = np.dot(term_i, term_resnet50_class_name) / (norm(term_i) * norm(term_resnet50_class_name))
+            #计算图文相似度
+            list_resnet50_sim.append(np.log(1 + frequency*float(resnet50_score)*swv_resnet50))
+
+    similarity_score = (max(list_vgg19_sim,default=0) + max(list_resnet50_sim,default=0)) / 2
+    print(similarity_score)
+    return similarity_score
+
+@app.route('/detect/imagetextscore', methods=['POST', 'GET'])
+def detect_image_text_score_model():
+    print("前端正在检测图文相关度...")
+    if request.method == 'POST':
+        print(request.form['newsText'])
+        content = request.form['newsText']
+        vgg19_class_name = 'stole'
+        resnet50_class_name = 'stole'
+        vgg19_score = 0.79908156
+        resnet50_score = 0.74402755
+        score = image_get_img_word_sim(content, vgg19_class_name, resnet50_class_name, vgg19_score, resnet50_score)
+        response = {"status": 200,
+                    "score": str(score)}
+    else:
+        score = 0
+        response = {"status": 200,
+                    "score": str(score)}
+
+    return jsonify(response)
 
 if __name__ == '__main__':
     app.run(debug=True)

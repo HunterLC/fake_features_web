@@ -13,9 +13,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="/static/plugins/fontawesome-free/css/all.min.css">
+  <!-- jsGrid -->
+  <link rel="stylesheet" href="/static/plugins/jsgrid/jsgrid.min.css">
+  <link rel="stylesheet" href="/static/plugins/jsgrid/jsgrid-theme.min.css">
   <!-- Ekko Lightbox -->
   <link rel="stylesheet" href="/static/plugins/ekko-lightbox/ekko-lightbox.css">
-
+  <!-- jsGrid -->
+  <link rel="stylesheet" href="/static/plugins/jsgrid/jsgrid.min.css">
+  <link rel="stylesheet" href="/static/plugins/jsgrid/jsgrid-theme.min.css">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="/static/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="/static/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
@@ -76,13 +83,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link active">
+                <a href="/start" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>统计信息</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/fextraction" class="nav-link">
+                <a href="" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>特征提取</p>
                 </a>
@@ -94,13 +101,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/imagetext" class="nav-link">
+                <a href="" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>图文相关度检测</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/detect" class="nav-link">
+                <a href="/detect" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>新闻检测
                       <span class="right badge badge-danger">Hot</span>
@@ -132,16 +139,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">统计信息</h1>
+            <h1 class="m-0 text-dark">图文相关度检测</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="">功能菜单</a></li>
-              <li class="breadcrumb-item active">统计信息</li>
+              <li class="breadcrumb-item active">图文相关度检测</li>
             </ol>
           </div><!-- /.col -->
-        </div>
-          <!-- /.row -->
+        </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
@@ -149,109 +155,78 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
-          <div class="row">
-              <div class="col-md-4">
-                  <!-- PIE CHART -->
-                  <div class="card card-info">
-              <div class="card-header">
-                <h3 class="card-title">微博数据集用户性别统计</h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
-                </div>
-              </div>
-              <div class="card-body">
-                <canvas id="pieChartGender" style="min-height: 320px; height: 320px; max-height: 320px; max-width: 100%;"></canvas>
-              </div>
-              <!-- /.card-body -->
-            </div>
-                  <!-- /.card -->
-              </div>
-              <div class="col-md-8">
-                  <!-- Map card -->
-                  <div class="card bg-gradient-primary">
-              <div class="card-header border-0">
-                <h3 class="card-title">
-                  <i class="fas fa-map-marker-alt mr-1"></i>
-                  微博用户地址统计
-                </h3>
-                <!-- card tools -->
-                <div class="card-tools">
-                  <button type="button"
-                          class="btn btn-primary btn-sm"
-                          data-card-widget="collapse"
-                          data-toggle="tooltip"
-                          title="Collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                </div>
-                <!-- /.card-tools -->
-              </div>
-              <div class="card-body bg-transparent">
-                <div id="world-map" style="height: 315px; width: 100%;"></div>
-              </div>
-              <!-- /.card-body-->
-            </div>
-                  <!-- /.card -->
-              </div>
-          </div>
-
-            <div class="card card-primary">
-              <div class="card-header">
-                <div class="card-title">
-                  数据集词云展示
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <a href="/static/image/wordcloud_1.png" data-toggle="lightbox" data-title="真实新闻的词云" data-gallery="gallery">
-                      <img src="/static/image/wordcloud_1.png" class="img-fluid mb-2" alt="Real News"/>
-                    </a>
-                  </div>
-                  <div class="col-sm-4">
-                    <a href="/static/image/wordcloud_2.png" data-toggle="lightbox" data-title="虚假新闻的词云" data-gallery="gallery">
-                      <img src="/static/image/wordcloud_2.png" class="img-fluid mb-2" alt="Fake News"/>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
           <div class="card card-primary">
               <div class="card-header">
-                <div class="card-title">
-                  用户特征与新闻真假关联性分析
-                </div>
+                <h3 class="card-title">检测模块</h3>
               </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-3">
-                    <a href="/static/image/性别与真假新闻发布之间的关系条形图.png" data-toggle="lightbox" data-title="性别与真假新闻发布之间的关系条形图" data-gallery="gallery">
-                      <img src="/static/image/性别与真假新闻发布之间的关系条形图.png" class="img-fluid mb-2" alt="gender"/>
-                    </a>
-                  </div>
-                  <div class="col-sm-3">
-                    <a href="/static/image/关注数CDF图.png" data-toggle="lightbox" data-title="用户关注数CDF图" data-gallery="gallery">
-                      <img src="/static/image/关注数CDF图.png" class="img-fluid mb-2" alt="follow"/>
-                    </a>
-                  </div>
-                    <div class="col-sm-3">
-                    <a href="/static/image/粉丝数CDF图.png" data-toggle="lightbox" data-title="用户粉丝数CDF图" data-gallery="gallery">
-                      <img src="/static/image/粉丝数CDF图.png" class="img-fluid mb-2" alt="fans"/>
-                    </a>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form role="form" id="image_detect_form" method="post">
+                <div class="card-body">
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">输入文字</label>
+                    <textarea class="form-control" rows="3" placeholder="输入..." name="newsText"></textarea>
                   </div>
 
-                  <div class="col-sm-3">
-                    <a href="/static/image/发博数CDF图.png" data-toggle="lightbox" data-title="用户发博数CDF图" data-gallery="gallery">
-                      <img src="/static/image/发博数CDF图.png" class="img-fluid mb-2" alt="weibo count"/>
-                    </a>
+                  <div class="form-group">
+                    <label for="exampleInputFile">选择图片</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="pictureInputFile" onchange="fileImport();" accept=".png" name="pic">
+                        <label class="custom-file-label" for="exampleInputFile">选择图片</label>
+                      </div>
+{#                      <div class="input-group-append">#}
+{#                        <button class="input-group-text" id="upload_button">上传</button>#}
+{#                      </div>#}
+                    </div>
+                  </div>
+                    <img src="/static/dist/img/blank_image_text.png" id = 'imagetextsrc' class="img-fluid mb-2" alt="Fake News"/>
+                  <div class="form-group">
+                      <label for="exampleInputFile">检测结果</label>
+                      <div id="imageTextResult"></div>
                   </div>
                 </div>
-              </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="button" class="btn btn-primary" id="image_text_verify_button">验证</button>
+                </div>
+              </form>
             </div>
-      </div><!-- /.container-fluid -->
+           <div class="row">
+              <div class="col-md-12">
+                  <div class="card card-primary">
+                    <div class="card-header">
+                      <h3 class="card-title">图文相关度算法框架图</h3>
+                     </div>
+                     <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                        <div class="col-md-5">
+                          <img src="/static/image/图文相关度框架图.png" class="img-fluid mb-2" alt="Fake News"/>
+                        </div>
+                        <div class="col-md-7">
+                                    图文相关性算法针对具有图文对的微博新闻，从文本和图
+片两个方向进行差异化建模。对于文本内容，利用 jieba 分词工具进行中文分词，并使
+用停用词表进行停用词过滤，得到文本关键的词汇列表。对于图片，若新闻含有多张
+图片只取其中的一副作为后续识别的基准图。为了使结果更具有说服力，算法采用基
+于 TensorFlow 的 VGG19 和 ResNet50 模型，并分别使用其内置的图片分类网络给图
+片打上概率最大的英文标签。由于获得的两个图片标签的语言类型是英文，因此需要
+借助百度翻译 API 将其转化为中文标签。如此，三者的中文标签可借助 Word2Vec 模
+型转换为词向量进行后续的相关性计算。
+                        </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
 
+                    </div>
+                   </div>
+              </div>
+
+          </div>
+      </div><!-- /.container-fluid -->
 
     </div>
     <!-- /.content -->
@@ -296,11 +271,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="/static/plugins/ekko-lightbox/ekko-lightbox.min.js"></script>
 <!-- Filterizr-->
 <script src="/static/plugins/filterizr/jquery.filterizr.min.js"></script>
-
+<!-- jsGrid -->
+<script src="/static/plugins/jsgrid/jsgrid.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/static/dist/js/adminlte.min.js"></script>
 <!-- Sparkline -->
 <script src="/static/plugins/sparklines/sparkline.js"></script>
+<!-- SweetAlert2 -->
+<script src="/static/plugins/sweetalert2/sweetalert2.min.js"></script>
+<!-- FLOT CHARTS -->
+<script src="/static/plugins/flot/jquery.flot.js"></script>
+<!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+<script src="/static/plugins/flot-old/jquery.flot.resize.min.js"></script>
+<!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+<script src="/static/plugins/flot-old/jquery.flot.pie.min.js"></script>
 <!-- OPTIONAL SCRIPTS -->
 <script src="/static/plugins/chart.js/Chart.min.js"></script>
 <script src="/static/dist/js/demo.js"></script>
@@ -308,14 +292,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
 <script type="text/javascript" src="/static/plugins/echarts/dist/extension/dataTool.min.js"></script>
-<script type="text/javascript" src="/static/plugins/echarts/map/js/china.js"></script>
-<script type="text/javascript" src="/static/plugins/echarts/map/js/world.js"></script>
 <script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&ak=fUyCzCH9aSG1GI07iFFB5IVhyYKyEZAW&services=&t=20180823194355"></script>
 <script type="text/javascript" src="/static/plugins/echarts/dist/extension/bmap.min.js"></script>
+<script src="/static/dist/js/pages/table.js"></script>
 <script src="/static/dist/js/pages/chart.js"></script>
-<script src="/static/dist/js/pages/map.js"></script>
-<script src="/static/dist/js/pages/gender.js"></script>
-
+<script src="/static/dist/js/pages/chartfour.js"></script>
+<script src="/static/dist/js/pages/barchartfstime.js"></script>
+<script src="/static/dist/js/pages/imagetextverify.js"></script>
+<!-- bs-custom-file-input -->
+<script src="/static/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  bsCustomFileInput.init();
+});
+</script>
 <!-- Page specific script -->
 <script>
   $(function () {
@@ -327,6 +317,5 @@ scratch. This page gets rid of all links and provides the needed markup only.
     });
   })
 </script>
-
 </body>
 </html>

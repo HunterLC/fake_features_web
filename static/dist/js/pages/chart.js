@@ -148,7 +148,7 @@ var stackedBarChart = new Chart(stackedBarChartCanvas, {
     //-------------
 
 var featureChartData = {
-      labels  : ['原始特征', 'PCA','PCA+RFE','PCA+Filter+RFE'],
+      labels  : ['原始特征', 'PCA','PCA+Filter','PCA+Filter+RFE-RF'],
       datasets: [
         {
           label               : ['特征个数'],

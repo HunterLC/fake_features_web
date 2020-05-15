@@ -89,9 +89,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
+                <a href="/fextraction" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>特征提取</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>模型信息</p>
+                  <p>特征选择</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/imagetext" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>图文相关度检测</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -127,12 +139,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">模型信息</h1>
+            <h1 class="m-0 text-dark">特征选择</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="">功能菜单</a></li>
-              <li class="breadcrumb-item active">模型信息</li>
+              <li class="breadcrumb-item active">特征选择</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -144,78 +156,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="content">
       <div class="container-fluid">
            <!-- general form elements -->
-          <h5 class="m-0 text-dark">特征提取</h5>
-          <div class="card card-primary card-outline">
-          <div class="card-header">
-            <h3 class="card-title">
-              <i class="fas"></i>
-              三类特征明细表
-            </h3>
-            <div class="card-tools">
-               <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-               </button>
-            </div>
-          </div>
 
-          <div class="card-body">
-            <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" id="custom-content-below-home-tab" data-toggle="pill" href="#custom-content-below-home" role="tab" aria-controls="custom-content-below-home" aria-selected="true">文本特征</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="custom-content-below-profile-tab" data-toggle="pill" href="#custom-content-below-profile" role="tab" aria-controls="custom-content-below-profile" aria-selected="false">用户特征</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="custom-content-below-messages-tab" data-toggle="pill" href="#custom-content-below-messages" role="tab" aria-controls="custom-content-below-messages" aria-selected="false">图片特征</a>
-              </li>
-            </ul>
-            <div class="tab-content" id="custom-content-below-tabContent">
-              <div class="tab-pane active" id="custom-content-below-home" role="tabpanel" aria-labelledby="custom-content-below-home-tab">
-                  <div class="card" >
-                    <div class="card-header">
-                      <h3 class="card-title justify-content-center">文本特征列表</h3>
-                    </div>
-                    <!-- /.card-header -->
-                    <div class="card-body">
-                      <div id="textFeatures"></div>
-                  </div>
-                  <!-- /.card-body -->
-                  </div>
-                  <!-- /.card -->
-              </div>
-              <div class="tab-pane active" id="custom-content-below-profile" role="tabpanel" aria-labelledby="custom-content-below-profile-tab">
-                  <div class="card" >
-                    <div class="card-header">
-                      <h3 class="card-title justify-content-center">用户特征列表</h3>
-                    </div>
-                    <!-- /.card-header -->
-                    <div class="card-body">
-                      <div id="userFeatures"></div>
-                  </div>
-                  <!-- /.card-body -->
-                  </div>
-                  <!-- /.card -->
-              </div>
-              <div class="tab-pane active" id="custom-content-below-messages" role="tabpanel" aria-labelledby="custom-content-below-messages-tab">
-                  <div class="card" >
-                    <div class="card-header">
-                      <h3 class="card-title justify-content-center" id="imgLabel">图片特征列表</h3>
-                    </div>
-                    <!-- /.card-header -->
-                    <div class="card-body">
-                      <div id="imageFeatures"></div>
-                  </div>
-                  <!-- /.card-body -->
-                  </div>
-                  <!-- /.card -->
-              </div>
-            </div>
-            <div class="tab-custom-content">
-              <p class="lead mb-0">虚假新闻识别</p>
-            </div>
-          </div>
-          <!-- /.card -->
-        </div>
           <!-- /.card -->
 
           <h5 class="m-0 text-dark">四种特征选择算法对比</h5>

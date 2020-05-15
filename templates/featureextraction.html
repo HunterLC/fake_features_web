@@ -13,9 +13,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="/static/plugins/fontawesome-free/css/all.min.css">
+  <!-- jsGrid -->
+  <link rel="stylesheet" href="/static/plugins/jsgrid/jsgrid.min.css">
+  <link rel="stylesheet" href="/static/plugins/jsgrid/jsgrid-theme.min.css">
   <!-- Ekko Lightbox -->
   <link rel="stylesheet" href="/static/plugins/ekko-lightbox/ekko-lightbox.css">
-
+  <!-- jsGrid -->
+  <link rel="stylesheet" href="/static/plugins/jsgrid/jsgrid.min.css">
+  <link rel="stylesheet" href="/static/plugins/jsgrid/jsgrid-theme.min.css">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="/static/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="/static/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
@@ -76,13 +83,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link active">
+                <a href="/start" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>统计信息</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/fextraction" class="nav-link">
+                <a href="" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>特征提取</p>
                 </a>
@@ -100,7 +107,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/detect" class="nav-link">
+                <a href="/detect" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>新闻检测
                       <span class="right badge badge-danger">Hot</span>
@@ -132,16 +139,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">统计信息</h1>
+            <h1 class="m-0 text-dark">特征提取</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="">功能菜单</a></li>
-              <li class="breadcrumb-item active">统计信息</li>
+              <li class="breadcrumb-item active">特征提取</li>
             </ol>
           </div><!-- /.col -->
-        </div>
-          <!-- /.row -->
+        </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
@@ -149,109 +155,82 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
-          <div class="row">
-              <div class="col-md-4">
-                  <!-- PIE CHART -->
-                  <div class="card card-info">
-              <div class="card-header">
-                <h3 class="card-title">微博数据集用户性别统计</h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
-                </div>
-              </div>
-              <div class="card-body">
-                <canvas id="pieChartGender" style="min-height: 320px; height: 320px; max-height: 320px; max-width: 100%;"></canvas>
-              </div>
-              <!-- /.card-body -->
+           <!-- general form elements -->
+          <div class="card card-primary card-outline">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="fas"></i>
+              三类特征明细表
+            </h3>
+            <div class="card-tools">
+               <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+               </button>
             </div>
-                  <!-- /.card -->
-              </div>
-              <div class="col-md-8">
-                  <!-- Map card -->
-                  <div class="card bg-gradient-primary">
-              <div class="card-header border-0">
-                <h3 class="card-title">
-                  <i class="fas fa-map-marker-alt mr-1"></i>
-                  微博用户地址统计
-                </h3>
-                <!-- card tools -->
-                <div class="card-tools">
-                  <button type="button"
-                          class="btn btn-primary btn-sm"
-                          data-card-widget="collapse"
-                          data-toggle="tooltip"
-                          title="Collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                </div>
-                <!-- /.card-tools -->
-              </div>
-              <div class="card-body bg-transparent">
-                <div id="world-map" style="height: 315px; width: 100%;"></div>
-              </div>
-              <!-- /.card-body-->
-            </div>
-                  <!-- /.card -->
-              </div>
           </div>
 
-            <div class="card card-primary">
-              <div class="card-header">
-                <div class="card-title">
-                  数据集词云展示
-                </div>
+          <div class="card-body">
+            <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="custom-content-below-home-tab" data-toggle="pill" href="#custom-content-below-home" role="tab" aria-controls="custom-content-below-home" aria-selected="true">文本特征</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="custom-content-below-profile-tab" data-toggle="pill" href="#custom-content-below-profile" role="tab" aria-controls="custom-content-below-profile" aria-selected="false">用户特征</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="custom-content-below-messages-tab" data-toggle="pill" href="#custom-content-below-messages" role="tab" aria-controls="custom-content-below-messages" aria-selected="false">图片特征</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="custom-content-below-tabContent">
+              <div class="tab-pane active" id="custom-content-below-home" role="tabpanel" aria-labelledby="custom-content-below-home-tab">
+                  <div class="card" >
+                    <div class="card-header">
+                      <h3 class="card-title justify-content-center">文本特征列表</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <div id="textFeatures"></div>
+                  </div>
+                  <!-- /.card-body -->
+                  </div>
+                  <!-- /.card -->
               </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-4">
-                    <a href="/static/image/wordcloud_1.png" data-toggle="lightbox" data-title="真实新闻的词云" data-gallery="gallery">
-                      <img src="/static/image/wordcloud_1.png" class="img-fluid mb-2" alt="Real News"/>
-                    </a>
+              <div class="tab-pane active" id="custom-content-below-profile" role="tabpanel" aria-labelledby="custom-content-below-profile-tab">
+                  <div class="card" >
+                    <div class="card-header">
+                      <h3 class="card-title justify-content-center">用户特征列表</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <div id="userFeatures"></div>
                   </div>
-                  <div class="col-sm-4">
-                    <a href="/static/image/wordcloud_2.png" data-toggle="lightbox" data-title="虚假新闻的词云" data-gallery="gallery">
-                      <img src="/static/image/wordcloud_2.png" class="img-fluid mb-2" alt="Fake News"/>
-                    </a>
+                  <!-- /.card-body -->
                   </div>
-                </div>
+                  <!-- /.card -->
+              </div>
+              <div class="tab-pane active" id="custom-content-below-messages" role="tabpanel" aria-labelledby="custom-content-below-messages-tab">
+                  <div class="card" >
+                    <div class="card-header">
+                      <h3 class="card-title justify-content-center" id="imgLabel">图片特征列表</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <div id="imageFeatures"></div>
+                  </div>
+                  <!-- /.card-body -->
+                  </div>
+                  <!-- /.card -->
               </div>
             </div>
-
-          <div class="card card-primary">
-              <div class="card-header">
-                <div class="card-title">
-                  用户特征与新闻真假关联性分析
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-3">
-                    <a href="/static/image/性别与真假新闻发布之间的关系条形图.png" data-toggle="lightbox" data-title="性别与真假新闻发布之间的关系条形图" data-gallery="gallery">
-                      <img src="/static/image/性别与真假新闻发布之间的关系条形图.png" class="img-fluid mb-2" alt="gender"/>
-                    </a>
-                  </div>
-                  <div class="col-sm-3">
-                    <a href="/static/image/关注数CDF图.png" data-toggle="lightbox" data-title="用户关注数CDF图" data-gallery="gallery">
-                      <img src="/static/image/关注数CDF图.png" class="img-fluid mb-2" alt="follow"/>
-                    </a>
-                  </div>
-                    <div class="col-sm-3">
-                    <a href="/static/image/粉丝数CDF图.png" data-toggle="lightbox" data-title="用户粉丝数CDF图" data-gallery="gallery">
-                      <img src="/static/image/粉丝数CDF图.png" class="img-fluid mb-2" alt="fans"/>
-                    </a>
-                  </div>
-
-                  <div class="col-sm-3">
-                    <a href="/static/image/发博数CDF图.png" data-toggle="lightbox" data-title="用户发博数CDF图" data-gallery="gallery">
-                      <img src="/static/image/发博数CDF图.png" class="img-fluid mb-2" alt="weibo count"/>
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div class="tab-custom-content">
+              <p class="lead mb-0">虚假新闻识别</p>
             </div>
+          </div>
+          <!-- /.card -->
+        </div>
+          <!-- /.card -->
+
+
       </div><!-- /.container-fluid -->
-
 
     </div>
     <!-- /.content -->
@@ -296,11 +275,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="/static/plugins/ekko-lightbox/ekko-lightbox.min.js"></script>
 <!-- Filterizr-->
 <script src="/static/plugins/filterizr/jquery.filterizr.min.js"></script>
-
+<!-- jsGrid -->
+<script src="/static/plugins/jsgrid/jsgrid.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/static/dist/js/adminlte.min.js"></script>
 <!-- Sparkline -->
 <script src="/static/plugins/sparklines/sparkline.js"></script>
+<!-- SweetAlert2 -->
+<script src="/static/plugins/sweetalert2/sweetalert2.min.js"></script>
+<!-- FLOT CHARTS -->
+<script src="/static/plugins/flot/jquery.flot.js"></script>
+<!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+<script src="/static/plugins/flot-old/jquery.flot.resize.min.js"></script>
+<!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+<script src="/static/plugins/flot-old/jquery.flot.pie.min.js"></script>
 <!-- OPTIONAL SCRIPTS -->
 <script src="/static/plugins/chart.js/Chart.min.js"></script>
 <script src="/static/dist/js/demo.js"></script>
@@ -308,14 +296,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
 <script type="text/javascript" src="/static/plugins/echarts/dist/extension/dataTool.min.js"></script>
-<script type="text/javascript" src="/static/plugins/echarts/map/js/china.js"></script>
-<script type="text/javascript" src="/static/plugins/echarts/map/js/world.js"></script>
 <script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&ak=fUyCzCH9aSG1GI07iFFB5IVhyYKyEZAW&services=&t=20180823194355"></script>
 <script type="text/javascript" src="/static/plugins/echarts/dist/extension/bmap.min.js"></script>
+<script src="/static/dist/js/pages/verify.js"></script>
+<script src="/static/dist/js/pages/table.js"></script>
 <script src="/static/dist/js/pages/chart.js"></script>
-<script src="/static/dist/js/pages/map.js"></script>
-<script src="/static/dist/js/pages/gender.js"></script>
-
+<script src="/static/dist/js/pages/chartfour.js"></script>
+<script src="/static/dist/js/pages/barchartfstime.js"></script>
+<!-- bs-custom-file-input -->
+<script src="/static/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  bsCustomFileInput.init();
+});
+</script>
 <!-- Page specific script -->
 <script>
   $(function () {
@@ -327,6 +321,5 @@ scratch. This page gets rid of all links and provides the needed markup only.
     });
   })
 </script>
-
 </body>
 </html>
