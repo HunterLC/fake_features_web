@@ -173,7 +173,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <label for="exampleInputFile">选择图片</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="pictureInputFile" onchange="fileImport();" accept=".png" name="pic">
+                        <input type="file" class="custom-file-input" id="pictureInputFile" onchange="fileImport();" accept=".jpg" name="pic">
                         <label class="custom-file-label" for="exampleInputFile">选择图片</label>
                       </div>
 {#                      <div class="input-group-append">#}
@@ -215,6 +215,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
 片打上概率最大的英文标签。由于获得的两个图片标签的语言类型是英文，因此需要
 借助百度翻译 API 将其转化为中文标签。如此，三者的中文标签可借助 Word2Vec 模
 型转换为词向量进行后续的相关性计算。
+                            <div class="col-md-7"> <br>分数 < 0.5</div>
+                            <div class="col-md-7"> 相关性较弱</div>
+
+                            <div class="col-md-7"> <br>0.5 ≤ 分数 < 1 </div>
+                            <div class="col-md-7"> 相关性较强</div>
+
+                            <div class="col-md-7"> <br>分数 ≥ 1</div>
+                            <div class="col-md-7"> 相关性强</div>
+
+
+
+
                         </div>
                         </div>
                     </div>

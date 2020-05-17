@@ -25,7 +25,9 @@ user_csv_path = r'G:\毕设\数据集\微博\user.csv'
 fusion_no_object_csv_path = r'./static/model/fusion_news_features_0404_no_dup.csv'
 main_test_path = r'./static/model/test.csv'
 selected_features_data_path = r'./static/model/0404_filter_rfe_no_dup_0410.txt'
-sklearn_model_path = r'./static/model/train_model.m'
+sklearn_model_path_rf = r'./static/model/train_model.m'
+sklearn_model_path_dt = r'./static/model/train_model_dt.m'
+sklearn_model_path_knn = r'./static/model/train_model_knn.m'
 stopwords_path = r'./static/model/stopwords.txt'
 appid = '20190716000318328'
 secretKey = '7pjdBCkaUodI5eNqsBWB'
@@ -75,7 +77,7 @@ selected_features = get_selected_features()
 selected_features.append('label')
 selected_features.append('text_file')
 stopwords = get_stopwords_list()
-# model_word2vec = gensim.models.KeyedVectors.load_word2vec_format(r'G:\毕设\数据集\微博\news_12g_baidubaike_20g_novel_90g_embedding_64.bin', binary=True)
+model_word2vec = gensim.models.KeyedVectors.load_word2vec_format(r'G:\毕设\数据集\微博\news_12g_baidubaike_20g_novel_90g_embedding_64.bin', binary=True)
 
 
 def save_model(model, model_path):
@@ -371,7 +373,16 @@ def detect_test_model():
     #                                                                     random_state=1234)
     X_test = df.drop([label, 'text_file'], axis=1)
     y_test = df['label']
-    model = load_model(sklearn_model_path)
+
+    if request.form['selectionItem'] == str(1):
+        print('正在采用随机森林算法')
+        model = load_model(sklearn_model_path_rf)
+    elif request.form['selectionItem'] == str(2):
+        print('正在采用决策树算法')
+        model = load_model(sklearn_model_path_dt)
+    else:
+        print('正在采用KNN算法')
+        model = load_model(sklearn_model_path_knn)
     rf_pred = model.predict(X_test)
     # print('随机森林ACC：\n', metrics.accuracy_score(y_test, rf_pred))
     # print('随机森林F 1：\n', metrics.f1_score(y_test, rf_pred, average='weighted'))

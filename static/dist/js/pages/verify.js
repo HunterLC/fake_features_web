@@ -26,10 +26,14 @@ $('#verify_button').on('click', function() {
         Toast.fire({
                     type: 'info',
                     title: '上传数据中，请稍后...'});
-        $.ajax({
+        // var myselection = document.getElementById("myselection");
+        // var selectIndex = myselection.selectedIndex;
+        // print(selectIndex);
+    $.ajax({
             //几个参数需要注意一下
                 type: "POST",//方法类型
                 dataType: "json",//预期服务器返回的数据类型
+                data:$('#detect_form').serialize(),
                 url: "/detect/test" ,//url
                 success: function (result) {
 
